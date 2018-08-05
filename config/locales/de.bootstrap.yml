@@ -1,0 +1,73 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+de:
+  title: "StugIS - Stugen Informaions System"
+  view:
+    footer:
+      stuga_missing: "Dein StugA fehlt?"
+      stuga_wrong_information: "Falsche Informationen melden!"
+      stuga_admins: "Stugen Administratoren"
+      privacy: "Datenschutzerklärung"
+      imprint: "Impressum"
+    header:
+      stugen: "Stugen"
+      stuko:
+        short: "StuKo"
+        long: "Stugenkonferenz"
+      sr:
+        short: "SR"
+        long: "Studierendenrat"
+      asta:
+        short: "AStA"
+        long: "Allgemeiner Studierendenausschuss"
+      unibremen: "Universität Bremen"
+      search:
+        label: "Seite durchsuchen"
+        placeholder: "StugA suchen"
+    overview:
+      title: "Stugen / Fachschaften an der Universität Bremen"
+      expand_all: "Alle Einträge erweitern."
+  breadcrumbs:
+    application:
+      root: "Index"
+    pages:
+      pages: "Pages"
+  helpers:
+    actions: "Aktionen"
+    links:
+      back: "Zurück"
+      cancel: "Abbrechen"
+      show: "Anzeigen"
+      confirm: "Bist du dir sicher?"
+      destroy: "Löschen"
+      new: "Neu"
+      edit: "Bearbeiten"
+    titles:
+      show: "%{model} anzeigen"
+      edit: "%{model} bearbeiten"
+      save: "%{model} speichern"
+      new: "%{model} anlegen"
+      delete: "%{model} entfernen"
+  activerecord:
+    models:
+      faculty:
+        one: "Fachbereich"
+        other: "Fachbereiche"
+      stuga:
+        one: "StugA"
+        other: "Stugen oder so"
+    attributes:
+      stuga:
+        label: "Name"
+        faculty: "Fachbereich"
+        website: "Website"
+        email: "E-Mail"
+        telephone: "Telefon"
+        building: "Gebäude"
+        room: "Raum"
+        created_at: "Erzeugt am"
+      faculty:
+        id: "Nummer"
+        label: "Bezeichnung"
+        created_at: "Erzeugt am"

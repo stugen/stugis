@@ -1,0 +1,45 @@
+%h2
+  = t('view.overview.title')
+  %a{:data => {:toggle => 'collapse', :target => ".stugen-container"}, :title => t('view.overview.expand_all')}
+    %i.fa.fa-angle-double-down
+
+.overview
+  - @faculties.each do |fb|
+    .faculty{:class => "fb-#{fb.id}"}
+      %h3{:data => {:toggle => 'collapse', :target => ".fb-#{fb.id} .stugen-container"}}
+        %i.fa.fa-chevron-right
+        = t('activerecord.models.faculty.one')
+        = fb.id
+        &ndash;
+        = fb.label
+      .container.stugen-container.collapse.in
+        .stugen
+          - fb.stugen.each do |stuga|
+            .stuga
+              .stuga-body
+                %h4.stuga-title
+                  = stuga.label
+                .stuga-text
+                  - unless (stuga.building.blank? and stuga.room.blank?)
+                    %a{:target => '_blank', :href => "http://oracle-web.zfn.uni-bremen.de/lageplan/lageplan?haus=#{stuga.building}&raum=#{stuga.room}&pi_anz=0"}
+                      %i.fa.fa-home
+                      %span
+                        = stuga.building
+                        = stuga.room
+                  - unless stuga.telephone.blank?
+                    %span
+                      %i.fa.fa-phone
+                      - if stuga.telephone.length < 6
+                        = "218-#{stuga.telephone}"
+                      - else
+                        = stuga.telephone
+                  - unless stuga.website.blank?
+                    %a{:href => stuga.website}
+                      %i.fa.fa-globe
+                      %span
+                        = stuga.website.gsub /http[s]?:\/\/(.*?)[\/]?$/, '\1'
+                  - unless stuga.email.blank?
+                    %a{:href => "mailto:#{stuga.email}"}
+                      %i.fa.fa-envelope
+                      %span
+                        = stuga.email

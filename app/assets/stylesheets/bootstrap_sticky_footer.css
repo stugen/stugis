@@ -1,0 +1,157 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin: 60px 0 !important;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Tahoma", sans-serif;
+}
+div {
+  clear: both;
+}
+.footer, .header {
+  position: fixed;
+  width: 100%;
+  background-color: #21467a;
+  color: #ffffff;
+}
+.footer a, .header a, .footer a:visited, .header a:visited, .header .btn-link {
+  color: #ffffff;
+}
+.footer a:hover {
+    background-color: unset !important;
+  text-decoration: underline !important;
+}
+.header a:hover, .header .btn-link:hover {
+  background-color: #ba002c !important;
+  text-decoration: none !important;
+}
+.footer {
+  bottom: 0;
+  height: 40px;
+  line-height: 40px;
+}
+.header, .header .btn-link, .header .form-control {
+  top: 0;
+  height: 60px;
+  line-height: 60px;
+  font-size: 22px;
+}
+.header .btn-link {
+  border: none;
+}
+.header .form-control {
+  border: none;
+  border-radius: 0;
+}
+.header .form-inline {
+  display: flex;
+}
+#search, .pseudo-search {
+  margin-left: auto;
+}
+#search > *, #search:target + .pseudo-search {
+  display: none;
+}
+#search:target > *, #search .pseudo-search {
+  display: inline-block;
+}
+h2 {
+  background-color: #e8ecf1;
+  clear: left;
+  float: left;
+  margin-left: -100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 15px 10px 60px;
+  padding-left: 100%;
+  color: #21467a;
+}
+h3, h4, h5, h6 {
+  color: #21467a;
+  margin: 0;
+}
+*[data-toggle] {
+  cursor: pointer;
+}
+.faculty {
+  padding: 7.5px;
+  margin-top: 15px;
+  background-color: #e8ecf1;
+}
+.stugen-container {
+  width: 100%;
+  padding: 0;
+}
+.stugen {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.stuga {
+    padding: 15px;
+    margin: 7.5px;
+    width: 30%;
+    min-width: 30%;
+    display: inline-block;
+    background-color: #ffffff;
+    flex: 1;
+}
+.stuga-body {
+}
+.stuga-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 15px;
+  line-height: 23px;
+}
+.stuga-text > * {
+  display: block;
+}
+.stuga-title {
+  margin: 0;
+  margin-bottom: 10px;
+}
+body a, body a:visited {
+  color: #21467a;
+}
+body a:hover {
+  background-color: unset;
+  text-decoration: unset;
+  color: #ba002c;
+}
+body a:hover > span {
+    font-decoration: underline;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 10px 25px;
+}
+
+.footer > .container, .header > .container {
+  display: flex;
+  justify-content: left;
+  padding: 0;
+}
+.footer > .container {
+  justify-content: space-around;
+}
+
+.footer > .container > a, .header > .container > a, .header .btn-link {
+  padding: 0 24px;
+}
+
+.header img {
+    height: 40px;
+}
+
+code {
+  font-size: 80%;
+}

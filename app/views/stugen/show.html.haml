@@ -1,0 +1,36 @@
+%p#notice= notice
+
+%p
+  %b Label:
+  = @stugen.label
+%p
+  %b Abbreviation:
+  = @stugen.abbreviation
+%p
+  %b Description:
+  = @stugen.description
+%p
+  %b Faculty:
+  = @stugen.faculty
+%p
+  %b Picture:
+  = @stugen.picture
+%p
+  %b Website:
+  = @stugen.website
+%p
+  %b Email:
+  = @stugen.email
+%p
+  %b Telephone:
+  = @stugen.telephone
+%p
+  %b Building:
+  = @stugen.building
+%p
+  %b Room:
+  = @stugen.room
+
+= link_to 'Edit', edit_stugen_path(@stugen)
+\|
+= link_to 'Back', stugen_path
