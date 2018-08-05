@@ -115,15 +115,15 @@ h3, h4, h5, h6 {
   margin: 0;
   margin-bottom: 10px;
 }
-body a, body a:visited {
+.content a, .content a:visited {
   color: #21467a;
 }
-body a:hover {
+.content a:hover {
   background-color: unset;
   text-decoration: unset;
   color: #ba002c;
 }
-body a:hover > span {
+.content a:hover > span {
     font-decoration: underline;
 }
 
