@@ -20,15 +20,18 @@ div {
   background-color: #21467a;
   color: #ffffff;
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Tahoma", sans-serif;
+  border: none;
+  border-radius: 0;
 }
 .footer a, .header a, .footer a:visited, .header a:visited, .header .btn-link {
   color: #ffffff;
+  text-decoration: none !important;
 }
 .footer a:hover {
-    background-color: unset !important;
+  background-color: unset !important;
   text-decoration: underline !important;
 }
-.header a:hover, .header .btn-link:hover {
+.header a:hover, .header a:active, .header .btn-link:hover, .header .btn-link:active {
   background-color: #ba002c !important;
   text-decoration: none !important;
 }
@@ -37,7 +40,7 @@ div {
   height: 40px;
   line-height: 40px;
 }
-.header, .header .btn-link, .header .form-control {
+.header, .header .btn-link, .header .form-control, .header .navbar-title {
   top: 0;
   height: 60px;
   line-height: 60px;
@@ -62,6 +65,21 @@ div {
 #search:target > *, #search .pseudo-search {
   display: inline-block;
 }
+.navbar-toggle {
+    height: 60px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+}
+.navbar-toggle > .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-title {
+  padding: 0 10px;
+  display: none;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Tahoma", sans-serif;
 }
@@ -143,6 +161,32 @@ h3, h4, h5, h6 {
     width: 95%;
     min-width: 95%;
   }
+  #navigation {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+  }
+  #navigation.collapsing {
+    display: block;
+  }
+  #navigation.collapse {
+    display: none;
+  }
+  #navigation.collapse.in {
+    display: block;
+  }
+  #navigation > * {
+    display: block;
+    width: 100%;
+    background-color: #21467a;
+  }
+  .header {
+    justify-content: right;
+  }
+  .navbar-title {
+    display: inline-block;
+  }
 }
 
 i.fa > span {
@@ -157,7 +201,7 @@ body > .container {
   padding: 10px 25px;
 }
 
-.footer > .container, .header > .container {
+.footer > .container, #navigation {
   display: flex;
   justify-content: left;
   padding: 0;
@@ -166,7 +210,7 @@ body > .container {
   justify-content: space-around;
 }
 
-.footer > .container > a, .header > .container > a, .header .btn-link {
+.footer > .container > a, #navigation > a, #navigation .btn-link {
   padding: 0 24px;
 }
 
