@@ -14,7 +14,7 @@
         = fb.label
       .container.stugen-container.collapse
         .stugen
-          - fb.stugen.each do |stuga|
+          - fb.stugen.sort_by(&:label).each do |stuga|
             .stuga
               .stuga-body
                 %h4.stuga-title
