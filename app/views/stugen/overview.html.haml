@@ -30,12 +30,13 @@
                         = stuga.building
                         = stuga.room
                   - unless stuga.telephone.blank?
-                    %span
+                    %a{:href => "tel:0049#{stuga.telephone.length < 6 ? "421218#{stuga.telephone}" : stuga.telephone}"}
                       %i.fa.fa-phone
-                      - if stuga.telephone.length < 6
-                        = "218-#{stuga.telephone}"
-                      - else
-                        = stuga.telephone
+                      %span
+                        - if stuga.telephone.length < 6
+                          = "218 - #{stuga.telephone}"
+                        - else
+                          = stuga.telephone
                   - unless stuga.website.blank?
                     %a{:href => stuga.website}
                       %i.fa.fa-globe
