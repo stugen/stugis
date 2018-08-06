@@ -2,7 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 de:
-  title: "Stug.IP - Stugen InformaionsPortal"
+  title: "Stug.IP &mdash; Stugen Informaions-Portal"
   view:
     footer:
       stuga_missing: "Dein StugA fehlt?"
