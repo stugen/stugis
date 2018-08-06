@@ -217,6 +217,9 @@ code {
   .header {
     justify-content: right;
   }
+  .header .navbar-toggle {
+    display: unset;
+  }
   .navbar-title {
     display: inline-block;
   }
