@@ -221,8 +221,12 @@ code {
     display: inline-block;
   }
   .footer {
+    position: initial;
     height: unset;
     line-height: 26px;
+  }
+  body {
+    margin-bottom: 0 !important;
   }
   .footer > .container {
     display: block;
