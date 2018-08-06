@@ -26,12 +26,18 @@
                   - unless (stuga.building.blank? and stuga.room.blank?)
                     %a{:target => '_blank', :href => "http://oracle-web.zfn.uni-bremen.de/lageplan/lageplan?haus=#{stuga.building}&raum=#{stuga.room}&pi_anz=0"}
                       %i.fa.fa-home
+                        %span
+                          = succeed ': ' do
+                            = t('activerecord.attributes.stuga.room')
                       %span
                         = stuga.building
                         = stuga.room
                   - unless stuga.telephone.blank?
                     %a{:href => "tel:0049#{stuga.telephone.length < 6 ? "421218#{stuga.telephone}" : stuga.telephone}"}
                       %i.fa.fa-phone
+                        %span
+                          = succeed ': ' do
+                            = t('activerecord.attributes.stuga.telephone')
                       %span
                         - if stuga.telephone.length < 6
                           = "218 - #{stuga.telephone}"
@@ -40,10 +46,16 @@
                   - unless stuga.website.blank?
                     %a{:href => stuga.website}
                       %i.fa.fa-globe
+                        %span
+                          = succeed ': ' do
+                            = t('activerecord.attributes.stuga.website')
                       %span
                         = stuga.website.gsub /http[s]?:\/\/(.*?)[\/]?$/, '\1'
                   - unless stuga.email.blank?
                     %a{:href => "mailto:#{stuga.email}"}
                       %i.fa.fa-envelope
+                        %span
+                          = succeed ': ' do
+                            = t('activerecord.attributes.stuga.email')
                       %span
                         = stuga.email
