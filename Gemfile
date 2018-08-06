@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'haml-rails'
+gem 'pandoc-ruby'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'autoprefixer-rails'

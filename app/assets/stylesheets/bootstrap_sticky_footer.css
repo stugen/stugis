@@ -7,7 +7,9 @@ html {
 body {
   /* Margin bottom by footer height */
   margin: 60px 0 !important;
-  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Tahoma", sans-serif;
+  font-family: 'Arial', sans-serif;
+  font-size: 15px;
+  line-height: 23px;
 }
 div {
   clear: both;
@@ -17,6 +19,7 @@ div {
   width: 100%;
   background-color: #21467a;
   color: #ffffff;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Tahoma", sans-serif;
 }
 .footer a, .header a, .footer a:visited, .header a:visited, .header .btn-link {
   color: #ffffff;
@@ -58,6 +61,9 @@ div {
 }
 #search:target > *, #search .pseudo-search {
   display: inline-block;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Tahoma", sans-serif;
 }
 h2 {
   background-color: #e8ecf1;
@@ -105,9 +111,6 @@ h3, h4, h5, h6 {
     overflow-x: auto;
 }
 .stuga-text {
-  font-family: 'Arial', sans-serif;
-  font-size: 15px;
-  line-height: 23px;
 }
 .stuga-text > * {
   display: block;

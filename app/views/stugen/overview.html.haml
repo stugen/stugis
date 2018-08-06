@@ -3,6 +3,9 @@
   %a{:data => {:toggle => 'collapse', :target => ".stugen-container"}, :title => t('view.overview.expand_all')}
     %i.fa.fa-angle-double-down
 
+.container
+  = render 'opening'
+
 .overview
   - @faculties.each do |fb|
     .faculty{:class => "fb-#{fb.id}"}
