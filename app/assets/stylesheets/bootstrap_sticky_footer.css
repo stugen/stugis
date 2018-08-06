@@ -156,39 +156,6 @@ h3, h4, h5, h6 {
   width: 100%;
 }
 
-@media only screen and (max-width: 991px) {
-  .stuga {
-    width: 95%;
-    min-width: 95%;
-  }
-  #navigation {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-  }
-  #navigation.collapsing {
-    display: block;
-  }
-  #navigation.collapse {
-    display: none;
-  }
-  #navigation.collapse.in {
-    display: block;
-  }
-  #navigation > * {
-    display: block;
-    width: 100%;
-    background-color: #21467a;
-  }
-  .header {
-    justify-content: right;
-  }
-  .navbar-title {
-    display: inline-block;
-  }
-}
-
 i.fa > span {
   display: none;
 }
@@ -220,4 +187,48 @@ body > .container {
 
 code {
   font-size: 80%;
+}
+
+@media only screen and (max-width: 991px) {
+  .stuga {
+    width: 95%;
+    min-width: 95%;
+  }
+  #navigation {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+  }
+  #navigation.collapsing {
+    display: block;
+  }
+  #navigation.collapse {
+    display: none;
+  }
+  #navigation.collapse.in {
+    display: block;
+  }
+  #navigation > * {
+    display: block;
+    width: 100%;
+    background-color: #21467a;
+  }
+  .header {
+    justify-content: right;
+  }
+  .navbar-title {
+    display: inline-block;
+  }
+  .footer {
+    height: unset;
+    line-height: 26px;
+  }
+  .footer > .container {
+    display: block;
+  }
+  .footer > .container > * {
+    display: block;
+    width: 100%;
+  }
 }
