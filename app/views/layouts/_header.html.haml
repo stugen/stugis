@@ -18,9 +18,9 @@
         = t('view.header.asta.short')
       %a{:href => "https://uni-bremen.de/"}
         = t('view.header.unibremen')
-      %form#search.form-inline.float-right
+      -#%form#search.form-inline.float-right
         %input.form-control{"aria-label" => t('view.header.search.label'), :placeholder => t('view.header.search.placeholder'), :type => "text"}/
         %button.btn.btn-link{:type => "submit"}
           %i.fa.fa-search
-      %a.btn.btn-link.pseudo-search{:href => '#search' }
+      -#%a.btn.btn-link.pseudo-search{:href => '#search' }
         %i.fa.fa-search
