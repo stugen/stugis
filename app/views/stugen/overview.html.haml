@@ -16,7 +16,7 @@
         &ndash;
         = fb.label
       .container.stugen-container.collapse
-        .stugen
+        .stugen{:class => "stugen-#{fb.stugen.count}"}
           - fb.stugen.sort_by(&:label).each do |stuga|
             .stuga
               .stuga-body
