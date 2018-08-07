@@ -197,8 +197,8 @@ code {
 
 @media only screen and (max-width: 991px) {
   .stuga {
-    width: 95%;
-    min-width: 95%;
+    width: 90% !important;
+    min-width: 90% !important;
   }
   #navigation {
     position: absolute;
