@@ -137,7 +137,9 @@ h3, h4, h5, h6 {
 .stuga-text {
 }
 .stuga-text > * {
-  display: block;
+  display: inline-block;
+  float: left;
+  clear: left;
   white-space: nowrap;
 }
 .stuga-text > * > span {
