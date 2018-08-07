@@ -2,7 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 de:
-  title: "Stugen Portal"
+  title: "Stugen-Portal"
   view:
     footer:
       stuga_missing: "Dein StugA fehlt?"
