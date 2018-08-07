@@ -56,7 +56,7 @@ de:
         other: "Fachbereiche"
       stuga:
         one: "StugA"
-        other: "Stugen oder so"
+        other: "Stugen"
     attributes:
       stuga:
         label: "Name"
