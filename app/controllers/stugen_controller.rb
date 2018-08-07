@@ -75,6 +75,6 @@ class StugenController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def stugen_params
-      params.require(:stugen).permit(:label, :abbreviation, :description, :faculty_id, :picture, :website, :email, :telephone, :building, :room)
+      params.require(:stuga).permit(:label, :abbreviation, :description, :faculty_id, :picture, :website, :email, :telephone, :building, :room)
     end
 end

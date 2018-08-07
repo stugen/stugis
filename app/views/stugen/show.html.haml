@@ -11,7 +11,7 @@
   = @stugen.description
 %p
   %b Faculty:
-  = @stugen.faculty
+  = @stugen.faculty.inspect
 %p
   %b Picture:
   = @stugen.picture
@@ -31,6 +31,6 @@
   %b Room:
   = @stugen.room
 
-= link_to 'Edit', edit_stugen_path(@stugen)
+= link_to 'Edit', edit_stuga_path(@stugen)
 \|
 = link_to 'Back', stugen_path
