@@ -21,7 +21,7 @@
             .stuga
               .stuga-body
                 %h4.stuga-title
-                  = stuga.label
+                  = wbr_slash stuga.label
                 .stuga-text
                   - unless (stuga.building.blank? and stuga.room.blank?)
                     %a{:target => '_blank', :href => "http://oracle-web.zfn.uni-bremen.de/lageplan/lageplan?haus=#{stuga.building}&raum=#{stuga.room}&pi_anz=0"}
@@ -50,7 +50,7 @@
                           = succeed ': ' do
                             = t('activerecord.attributes.stuga.website')
                       %span
-                        = stuga.website.gsub /http[s]?:\/\/(.*?)[\/]?$/, '\1'
+                        = wbr_slash stuga.website.gsub /http[s]?:\/\/(.*?)[\/]?$/, '\1'
                   - unless stuga.email.blank?
                     %a{:href => "mailto:#{stuga.email}"}
                       %i.fa.fa-envelope
