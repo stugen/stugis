@@ -6,7 +6,7 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin: 60px 0 !important;
+  margin: 0 !important;
   font-family: 'Arial', sans-serif;
   font-size: 15px;
   line-height: 23px;
@@ -15,7 +15,7 @@ div {
   clear: both;
 }
 .footer, .header {
-  position: fixed;
+  position: sticky;
   width: 100%;
   background-color: #21467a;
   color: #ffffff;
@@ -237,7 +237,6 @@ code {
     line-height: 26px;
   }
   body {
-    margin-bottom: 0 !important;
   }
   .footer > .container {
     display: block;
