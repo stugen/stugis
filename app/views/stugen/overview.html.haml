@@ -4,7 +4,8 @@
     %i.fa.fa-angle-double-down
 
 .container
-  = render 'opening'
+  :markdown
+    #{t('opening')}
 
 .overview
   - @faculties.each do |fb|
