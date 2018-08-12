@@ -4,6 +4,7 @@
 de:
   title: "Stugen-Portal"
   opening: "Eine Fachschaft (im Bremischen Studiengangsausschuss oder kurz **StugA**, in Mehrzahl **Stugen**) ist die studentische Vertretung auf Fächerebene und als solche erster Ansprechpartner für alle Studierenen bei Fragen zum Studienablauf und Problemen während des Studiums. Außerdem organisieren die Stugen viele Veranstaltungen zur Einführung ins Studium oder auch im weiteren Verlauf."
+  closing: "Diese Seite wird von den [Stugen Administratoren](mailto:stugis@admin.stugen.de) auf Zuruf gepflegt. Informationen welche auf Wunsch der Stugen aktuell erfasst und (öffentlich) dargestellt werden können umfassen: Name, zugehöriger Fachbereich, Raum, Telefon, Website und E-Mail-Adresse. Verbesserungsvorschläge aller Art sind bitte an die Kontaktadresse [stugis@admin.stugen.de](mailto:stugis@admin.stugen.de) zu richten. Sollten Informationen auf dieser Seite inkorrekt bzw. veraltet sein ergreife die Initiative und melde uns dies, damit wir die Seite gemeinsam aktuell halten können."
   view:
     footer:
       stuga_missing: "Dein StugA fehlt?"
