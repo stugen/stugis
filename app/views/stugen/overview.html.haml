@@ -60,6 +60,62 @@
                             = t('activerecord.attributes.stuga.email')
                       %span
                         = stuga.email
+                  - unless stuga.facebook.blank?
+                    %a{:href => stuga.facebook}
+                      %i.fa.fa-facebook
+                        %span
+                          = succeed ': ' do
+                            = t('activerecord.attributes.stuga.facebook')
+                      %span
+                        = sm_title stuga.facebook
+                  - unless stuga.twitter.blank?
+                    %a{:href => stuga.twitter}
+                      %i.fa.fa-twitter
+                        %span
+                          = succeed ': ' do
+                            = t('activerecord.attributes.stuga.twitter')
+                      %span
+                        = sm_title stuga.twitter
+                  - unless stuga.youtube.blank?
+                    %a{:href => stuga.youtube}
+                      %i.fa.fa-youtube
+                        %span
+                          = succeed ': ' do
+                            = t('activerecord.attributes.stuga.youtube')
+                      %span
+                        = sm_title stuga.youtube
+                  - unless stuga.instagram.blank?
+                    %a{:href => stuga.instagram}
+                      %i.fa.fa-instagram
+                        %span
+                          = succeed ': ' do
+                            = t('activerecord.attributes.stuga.instagram')
+                      %span
+                        = sm_title stuga.instagram
+                  - unless stuga.pinterest.blank?
+                    %a{:href => stuga.pinterest}
+                      %i.fa.fa-pinterest
+                        %span
+                          = succeed ': ' do
+                            = t('activerecord.attributes.stuga.pinterest')
+                      %span
+                        = sm_title stuga.pinterest
+                  - unless stuga.snapchat.blank?
+                    %a{:href => stuga.snapchat}
+                      %i.fa.fa-snapchat
+                        %span
+                          = succeed ': ' do
+                            = t('activerecord.attributes.stuga.snapchat')
+                      %span
+                        = sm_title stuga.snapchat
+                  - unless stuga.tumblr.blank?
+                    %a{:href => stuga.tumblr}
+                      %i.fa.fa-tumblr
+                        %span
+                          = succeed ': ' do
+                            = t('activerecord.attributes.stuga.tumblr')
+                      %span
+                        = sm_title stuga.tumblr
 
 .container
   :markdown

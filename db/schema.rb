@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180728105621) do
+ActiveRecord::Schema.define(version: 20180813204458) do
 
   create_table "faculties", force: :cascade do |t|
     t.string "label"
@@ -31,6 +31,13 @@ ActiveRecord::Schema.define(version: 20180728105621) do
     t.string "room", default: ""
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "facebook", default: ""
+    t.string "twitter", default: ""
+    t.string "youtube", default: ""
+    t.string "instagram", default: ""
+    t.string "pinterest", default: ""
+    t.string "snapchat", default: ""
+    t.string "tumblr", default: ""
     t.index ["faculty_id"], name: "index_stugen_on_faculty_id"
   end
 
