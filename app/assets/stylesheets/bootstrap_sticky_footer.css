@@ -137,11 +137,11 @@ h3, h4, h5, h6 {
 .stuga-text {
 }
 .stuga-not-confirmed {
-  width: 100%;
-  word-wrap: break-word;
+  margin-bottom: 10px;
 }
-.stuga-not-confirmed > p {
-  white-space: unset !important;
+.stuga-text.stuga-not-confirmed > * {
+  white-space: unset;
+  display: contents;
 }
 .stuga-text > * {
   display: inline-block;
