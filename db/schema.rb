@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180813204458) do
+ActiveRecord::Schema.define(version: 20180814064244) do
 
   create_table "faculties", force: :cascade do |t|
     t.string "label"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20180813204458) do
     t.string "pinterest", default: ""
     t.string "snapchat", default: ""
     t.string "tumblr", default: ""
+    t.boolean "confirmed", default: false
     t.index ["faculty_id"], name: "index_stugen_on_faculty_id"
   end
 

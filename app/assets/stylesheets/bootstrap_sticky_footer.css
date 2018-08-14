@@ -136,6 +136,13 @@ h3, h4, h5, h6 {
 }
 .stuga-text {
 }
+.stuga-not-confirmed {
+  width: 100%;
+  word-wrap: break-word;
+}
+.stuga-not-confirmed > p {
+  white-space: unset !important;
+}
 .stuga-text > * {
   display: inline-block;
   float: left;
@@ -172,6 +179,9 @@ i.fa::before {
   display: inline-block;
   width: 1em;
   text-align: center;
+}
+.font-italic {
+  font-style: italic !important;
 }
 
 /* Custom page CSS
