@@ -26,7 +26,7 @@
                 - unless stuga.confirmed?
                   .stuga-text.stuga-not-confirmed.font-italic
                     :markdown
-                      #{t('view.overview.not_confirmed')}
+                      #{t('view.overview.not_confirmed', stuga: stuga.label)}
                 .stuga-text
                   - unless (stuga.building.blank? and stuga.room.blank?)
                     %a{:target => '_blank', :href => "http://oracle-web.zfn.uni-bremen.de/lageplan/lageplan?haus=#{stuga.building}&raum=#{stuga.room}&pi_anz=0"}
