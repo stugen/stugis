@@ -138,10 +138,12 @@ h3, h4, h5, h6 {
 }
 .stuga-not-confirmed {
   margin-bottom: 10px;
+  font-size: 0.9em;
 }
 .stuga-text.stuga-not-confirmed > * {
   white-space: unset;
   display: contents;
+  font-size: 1em;
 }
 .stuga-text > * {
   display: inline-block;

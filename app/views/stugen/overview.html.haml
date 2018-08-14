@@ -24,7 +24,7 @@
                 %h4.stuga-title
                   = wbr_slash stuga.label
                 - unless stuga.confirmed?
-                  .stuga-text.stuga-not-confirmed.font-italic
+                  .stuga-text.stuga-not-confirmed.font-italic.text-danger
                     %i.fa.fa-exclamation-triangle
                       %span
                         = succeed ': ' do
