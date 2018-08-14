@@ -32,7 +32,7 @@ de:
       expand_all: "Alle Einträge erweitern."
       not_confirmed:
         title: "Hinweis"
-        text: "Dieser Eintrag wurde noch nicht von dem betreffenden StugA (%{stuga}) bestätigt. Die Informationen könnten falsch sein. [Hilf mit](mailto:stugis@admin.stugen.de?subject=confirm %{stuga}) diese Meldung zu entfernen wenn du Mitglied des StugA bist und diese Informationen bestätigen/korrigieren kannst."
+        text: "Dieser Eintrag wurde noch nicht von dem betreffenden StugA bestätigt. Die Informationen könnten falsch sein. Als Mitglied des StugA [hilf mit](mailto:stugis@admin.stugen.de?subject=confirm %{stuga}) die Daten zu bestätigen/korrigieren um diese Meldung zu entfernen."
   breadcrumbs:
     application:
       root: "Index"
