@@ -39,8 +39,12 @@
                           = succeed ': ' do
                             = t('activerecord.attributes.stuga.room')
                       %span
-                        = stuga.building
-                        = stuga.room
+                        - unless stuga.room.blank?
+                          = succeed ', Raum ' do
+                            = stuga.display_name(:building)
+                          = stuga.room
+                        - else
+                          = stuga.display_name(:building)
                   - unless stuga.telephone.blank?
                     %a{:href => "tel:0049#{stuga.telephone.length < 6 ? "421218#{stuga.telephone}" : stuga.telephone}"}
                       %i.fa.fa-phone
