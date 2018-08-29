@@ -8,6 +8,7 @@ class Stuga < ApplicationRecord
       return "IW 1+2" if building == "IW"
       return "Sportturm" if building == "SpT"
       return "Grazer Str. 4" if building == "GRAZ"
+      return "ZeMKI (Linzer Straße 4)" if building == "ZeMKI"
       building
     else
       self.try(attr)
