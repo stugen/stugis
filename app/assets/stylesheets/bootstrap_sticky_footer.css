@@ -31,7 +31,7 @@ div {
   background-color: unset !important;
   text-decoration: underline !important;
 }
-.header a:hover, .header a:active, .header .btn-link:hover, .header .btn-link:active {
+.header a:hover, .header a:active, .header .btn-link:hover, .header .btn-link:active, .header a.current {
   background-color: #ba002c !important;
   text-decoration: none !important;
 }
