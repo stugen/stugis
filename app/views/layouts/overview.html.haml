@@ -29,5 +29,11 @@
   %body
     = render 'layouts/header'
     .container.content
+      - flash.each do |type, msg|
+        - cls = 'alert-danger'
+        - cls = 'alert-success' if type == 'notice'
+        %div{ class: "alert #{cls}" }
+          :markdown
+            #{msg}
       = yield
     = render 'layouts/footer'

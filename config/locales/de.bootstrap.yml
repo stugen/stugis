@@ -7,6 +7,10 @@ de:
 Alle Stugen (und andere Interessierte im Umfeld der Stugen) können über die Mailingliste [stuko@stugen.de](mailto:stuko@stugen.de) mit [Selbsteintragung](https://mailman.zfn.uni-bremen.de/cgi-bin/mailman/listinfo/stugen) erreicht werden. Die Mailingliste ist für Universitätsexterne moderiert und Werbung ist expliziet nicht erwünscht.
 Über das [Stugen-Wiki](https://wiki.stugen.de/) werden z.B. die Einladungen und Protokolle der Stugenkonferenz (StuKo) veröffentlicht, außerdem sind dort weitere Informationen für die aktive Mitarbeit in Stugen zusammengetragen."
   closing: "Diese Seite wird von den [Stugen Administratoren](mailto:stugis@admin.stugen.de) auf Zuruf gepflegt. Informationen welche auf Wunsch der Stugen aktuell erfasst und (öffentlich) dargestellt werden können umfassen: Name, zugehöriger Fachbereich, Raum, Telefon, Website, E-Mail-Adresse und diverse Social-Media-Profile (Facebook, Twitter, YouTube, Instagram, Pinterest, Snapchat und Tumblr). Verbesserungsvorschläge aller Art sind bitte an die Kontaktadresse [stugis@admin.stugen.de](mailto:stugis@admin.stugen.de) zu richten. Sollten Informationen auf dieser Seite inkorrekt bzw. veraltet sein ergreife die Initiative und melde uns dies, damit wir die Seite gemeinsam aktuell halten können."
+  pagetitles:
+    general_details: "Allgemeine Informationen"
+    contact_details: "Kontaktinformationen"
+    link_list: "Links zu Onlineauftritten (Homepage, Social Media, o.Ä.)"
   view:
     footer:
       stuga_missing: "Dein StugA fehlt?"
@@ -29,12 +33,17 @@ Alle Stugen (und andere Interessierte im Umfeld der Stugen) können über die Ma
       search:
         label: "Seite durchsuchen"
         placeholder: "StugA suchen"
+    messages:
+      verified: "Vielen Dank für die Bestätigung der Daten von %{stuga}!"
+      updated: "Vielen Dank für die Aktuallisierung der Daten von %{stuga}! Eine Bestätigung der Änderungen wurde an %{email} versandt."
     overview:
       title: "Stugen / Fachschaften an der Universität Bremen"
       expand_all: "Alle Einträge erweitern."
-      not_confirmed:
+      information:
         title: "Hinweis"
-        text: "Dieser Eintrag wurde noch nicht von dem betreffenden StugA bestätigt. Die Informationen könnten falsch sein. Als Mitglied des StugA [hilf mit](mailto:stugis@admin.stugen.de?subject=confirm %{stuga}) die Daten zu bestätigen/korrigieren um diese Meldung zu entfernen."
+        confirmed_old_1: "Dieser Eintrag wurde zuletzt vor über einem Jahr aktuallisiert oder bestätigt. Die Informationen könnten mittlerweile veraltet sein. Als Mitglied des StugA [hilf mit](mailto:stugis@admin.stugen.de?subject=confirm %{stuga}) die Daten zu bestätigen/korrigieren um diese Meldung zu entfernen."
+        confirmed_old_2: "Dieser Eintrag wurde zuletzt vor über 2 Jahren aktuallisiert oder bestätigt. Die Informationen könnten mittlerweile veraltet sein. Als Mitglied des StugA [hilf mit](mailto:stugis@admin.stugen.de?subject=confirm %{stuga}) die Daten zu bestätigen/korrigieren um diese Meldung zu entfernen."
+        not_confirmed: "Dieser Eintrag wurde noch nicht von dem betreffenden StugA bestätigt. Die Informationen könnten falsch sein. Als Mitglied des StugA [hilf mit](mailto:stugis@admin.stugen.de?subject=confirm %{stuga}) die Daten zu bestätigen/korrigieren um diese Meldung zu entfernen."
   breadcrumbs:
     application:
       root: "Index"
@@ -54,6 +63,7 @@ Alle Stugen (und andere Interessierte im Umfeld der Stugen) können über die Ma
       show: "%{model} anzeigen"
       edit: "%{model} bearbeiten"
       save: "%{model} speichern"
+      verify: "%{model} bestätigen und speichern"
       new: "%{model} anlegen"
       delete: "%{model} entfernen"
   activerecord:
@@ -67,21 +77,41 @@ Alle Stugen (und andere Interessierte im Umfeld der Stugen) können über die Ma
     attributes:
       stuga:
         label: "Name"
-        faculty: "Fachbereich"
-        website: "Website"
+        label_help: "(inkl. StugA, Fachschaft o.Ä.)"
+        abbreviation: "Kurform"
+        abbreviation_help: "(inkl. StugA, Fachschaft o.Ä.)"
+        faculty_id: "Fachbereich"
+        information: "Hinweistext"
+        information_help: "(z.B. bei besonderen Situationen wie Umzug durch Umbau o.Ä., Markdown-Unterstützung)"
+        website: "Homepage"
+        website_help: "(nach Möglichkeit `https://*.stugen.de` oder `https://*.uni-bremen.de`)"
         email: "E-Mail"
+        email_help: "(nach Möglichkeit `*@stugen.de` oder `*@uni-bremen.de`)"
         telephone: "Telefon"
+        telephone_help: "(Kurzwahl im Uninetz, d.h. ohne \"(0421) 218-\")"
         building: "Gebäude"
+        building_help: "(wie in der [Raumsuche](https://oracle-web.zfn.uni-bremen.de/web/p_ebenen_ansicht){:target='_blank'} der Uni)"
         room: "Raum"
+        room_help: "(wie in der [Raumsuche](https://oracle-web.zfn.uni-bremen.de/web/p_ebenen_ansicht){:target='_blank'} der Uni)"
         facebook: "Facebook"
+        facebook_help: "(`https://www.facebook.com/<StugA>/`)"
         twitter: "Twitter"
+        twitter_help: "(`https://twitter.com/<StugA>/`)"
         youtube: "YouTube"
+        youtube_help: "(`https://www.youtube.com/<StugA>/`)"
         instagram: "Instagram"
+        instagram_help: "(`https://www.instagram.com/<StugA>/`)"
         pinterest: "Pinterest"
+        pinterest_help: "(`https://www.pinterest.de/<StugA>/`)"
         snapchat: "Snapchat"
+        snapchat_help: "(`https://www.snapchat.com/add/<StugA>/`)"
         tumblr: "Tumblr"
+        tumblr_help: "(`https://<StugA>.tumblr.com/`)"
+        confirmed: "Daten vom StugA initial bestätigt"
+        updated_at: "Aktuallisiert am"
         created_at: "Erzeugt am"
       faculty:
         id: "Nummer"
         label: "Bezeichnung"
+        updated_at: "Aktuallisiert am"
         created_at: "Erzeugt am"

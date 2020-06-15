@@ -1,4 +1,6 @@
-= form_for @stugen do |f|
+- verify = %w(verify edit_verify).include?(params[:action])
+- form_dest = verify ? verify_path(params[:id], params[:key]) : stuga_path(params[:id])
+= form_for @stugen, url: form_dest do |f|
   - if @stugen.errors.any?
     #error_explanation
       %h2= "#{pluralize(@stugen.errors.count, "error")} prohibited this stugen from being saved:"
@@ -6,59 +8,100 @@
         - @stugen.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label :label
-    = f.text_field :label
-  .field
-    = f.label :abbreviation
-    = f.text_field :abbreviation
-  .field
-    = f.label :description
-    = f.text_field :description
-  .field
-    = f.label :faculty_id
-    = f.text_field :faculty_id
-  .field
-    = f.label :picture
-    = f.text_field :picture
-  .field
-    = f.label :website
-    = f.text_field :website
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :telephone
-    = f.text_field :telephone
-  .field
-    = f.label :building
-    = f.text_field :building
-  .field
-    = f.label :room
-    = f.text_field :room
-  .field
-    = f.label :facebook
-    = f.text_field :facebook
-  .field
-    = f.label :twitter
-    = f.text_field :twitter
-  .field
-    = f.label :youtube
-    = f.text_field :youtube
-  .field
-    = f.label :instagram
-    = f.text_field :instagram
-  .field
-    = f.label :pinterest
-    = f.text_field :pinterest
-  .field
-    = f.label :snapchat
-    = f.text_field :snapchat
-  .field
-    = f.label :tumblr
-    = f.text_field :tumblr
-  .field
-    = f.label :confirmed
-    = f.check_box :confirmed
-  .actions
-    = f.submit 'Save'
+  .faculty
+    .card-body
+      .form-row
+        .form-group.col
+          = f.submit t("helpers.titles.#{verify ? 'verify' : 'save'}", model: @stugen.label), class: 'form-control'
+  .faculty
+    %h3
+      = t('pagetitles.general_details')
+    .card-body
+      .form-row
+        .form-group.col
+          = f.label :label do
+            = t_help(:stuga, :label)
+          = f.text_field :label, class: 'form-control', disabled: verify
+      .form-row
+        .form-group.col.col-sm-6
+          = f.label :abbreviation do
+            = t_help(:stuga, :abbreviation)
+          = f.text_field :abbreviation, class: 'form-control', disabled: verify
+        .form-group.col.col-sm-6
+          = f.label :faculty_id do
+            = t_help(:stuga, :faculty_id)
+          = f.select :faculty_id, Faculty.all.map{|fb| ["#{fb.id} #{fb.label}", fb.id]}, {promt: true}, class: 'form-control', disabled: verify
+      .form-row
+        .form-group.col
+          = f.label :information do
+            = t_help(:stuga, :information)
+          = f.text_area :information, class: 'form-control', rows: 3, style: 'resize: vertical;'
+      - unless verify
+        .form-row
+          .form-group.col
+            = f.label :confirmed
+            = f.check_box :confirmed
+  .faculty
+    %h3
+      = t('pagetitles.contact_details')
+    .card-body
+      .form-row
+        .form-group.col.col-sm-6
+          = f.label :email do
+            = t_help(:stuga, :email)
+          = f.text_field :email, class: 'form-control', disabled: verify
+        .form-group.col.col-sm-6
+          = f.label :telephone do
+            = t_help(:stuga, :telephone)
+          = f.text_field :telephone, class: 'form-control'
+      .form-row
+        .form-group.col.col-sm-6
+          = f.label :building do
+            = t_help(:stuga, :building)
+          = f.text_field :building, class: 'form-control'
+        .form-group.col.col-sm-6
+          = f.label :room do
+            = t_help(:stuga, :room)
+          = f.text_field :room, class: 'form-control'
+  .faculty
+    %h3
+      = t('pagetitles.link_list')
+    .card-body
+      .form-row
+        .form-group.col
+          = f.label :website do
+            = t_help(:stuga, :website)
+          = f.text_field :website, class: 'form-control'
+        .form-group.col
+          = f.label :facebook do
+            = t_help(:stuga, :facebook)
+          = f.text_field :facebook, class: 'form-control'
+        .form-group.col
+          = f.label :twitter do
+            = t_help(:stuga, :twitter)
+          = f.text_field :twitter, class: 'form-control'
+        .form-group.col
+          = f.label :youtube do
+            = t_help(:stuga, :youtube)
+          = f.text_field :youtube, class: 'form-control'
+        .form-group.col
+          = f.label :instagram do
+            = t_help(:stuga, :instagram)
+          = f.text_field :instagram, class: 'form-control'
+        .form-group.col
+          = f.label :pinterest do
+            = t_help(:stuga, :pinterest)
+          = f.text_field :pinterest, class: 'form-control'
+        .form-group.col
+          = f.label :snapchat do
+            = t_help(:stuga, :snapchat)
+          = f.text_field :snapchat, class: 'form-control'
+        .form-group.col
+          = f.label :tumblr do
+            = t_help(:stuga, :tumblr)
+          = f.text_field :tumblr, class: 'form-control'
+  .faculty
+    .card-body
+      .form-row
+        .form-group.col
+          = f.submit t("helpers.titles.#{verify ? 'verify' : 'save'}", model: @stugen.label), class: 'form-control'

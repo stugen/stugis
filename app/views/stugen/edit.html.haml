@@ -1,7 +1,9 @@
-%h1 Editing stugen
+- verify = %w(verify edit_verify).include?(params[:action])
+%h1= t('helpers.titles.edit', model: @stugen.label)
 
 = render 'form'
 
-= link_to 'Show', @stugen
-\|
-= link_to 'Back', stugen_path
+- unless verify
+  = link_to 'Show', @stugen
+  \|
+  = link_to 'Back', stugen_path

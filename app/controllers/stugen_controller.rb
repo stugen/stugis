@@ -1,30 +1,43 @@
 class StugenController < ApplicationController
-  before_action :set_stugen, only: [:show, :edit, :update, :destroy]
+  before_action :set_stugen, only: [:show, :edit, :update, :destroy, :edit_verify, :verify]
+  before_action :verify_key, only: [:edit_verify, :verify]
 
   # GET /
   def overview
-      @faculties = Faculty.all.preload(:stugen)
+     @faculties = Faculty.all.preload(:stugen)
      render layout: 'overview'
   end
 
-  # GET /stugen
-  # GET /stugen.json
+  # GET /admin
+  # GET /admin.json
+  # GET /admin/stugen
+  # GET /admin/stugen.json
   def index
-    @stugen = Stuga.all
+    @stugen = Stuga.all.order(:faculty_id, :label)
   end
 
-  # GET /stugen/1
-  # GET /stugen/1.json
+  # GET /admin/stugen/mails.json
+  def mails
+    render json: Stuga.all.order(:faculty_id, :label).map{|s|s.email}
+  end
+
+  # GET /admin/stugen/1
+  # GET /admin/stugen/1.json
   def show
   end
 
-  # GET /stugen/new
+  # GET /admin/stugen/new
   def new
     @stugen = Stuga.new
   end
 
-  # GET /stugen/1/edit
+  # GET /admin/stugen/1/edit
   def edit
+  end
+
+  # GET /verify/1/edit
+  def edit_verify
+    render :edit
   end
 
   # POST /stugen
@@ -56,6 +69,28 @@ class StugenController < ApplicationController
       end
     end
   end
+  # PATCH/PUT/GET /verify/1
+  # PATCH/PUT /verify/1.json
+  def verify
+    if params.include?(:stuga)
+      @sp = stugen_params.except(:label, :abbreviation, :faculty_id, :email)
+      msg = 'updated'
+    else
+      @sp = Hash.new
+      msg = 'verified'
+    end
+    @sp[:confirmed] = true
+    respond_to do |format|
+      if @stugen.update(@sp)
+        format.html { redirect_to :root, notice: t("view.messages.#{msg}", stuga: @stugen.label, email: @stugen.email) }
+        format.json { render :show, status: :ok, location: :root }
+      else
+        format.html { render :edit }
+        format.json { render json: @stugen.errors, status: :unprocessable_entity }
+      end
+    end
+    #render :edit
+  end
 
   # DELETE /stugen/1
   # DELETE /stugen/1.json
@@ -72,9 +107,12 @@ class StugenController < ApplicationController
     def set_stugen
       @stugen = Stuga.find(params[:id])
     end
+    def verify_key
+      redirect_to :root unless @stugen.verification_token == params[:key]
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def stugen_params
-      params.require(:stuga).permit(:label, :abbreviation, :description, :faculty_id, :picture, :website, :email, :telephone, :building, :room, :facebook, :twitter, :youtube, :instagram, :pinterest, :snapchat, :tumblr, :confirmed)
+      params.require(:stuga).permit(:label, :abbreviation, :information, :faculty_id, :website, :email, :telephone, :building, :room, :facebook, :twitter, :youtube, :instagram, :pinterest, :snapchat, :tumblr, :confirmed)
     end
 end
