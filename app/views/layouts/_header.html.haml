@@ -10,17 +10,23 @@
     #navigation.collapse
       %a.current{:href => "https://stugen.de/"}
         = t('view.header.stugen')
-      %a{:href => "https://stuko.stugen.de/", :title => t('view.header.stuko.long')}
-        = t('view.header.stuko.short')
-      %a{:href => "https://sr.uni-bremen.de/", :title => t('view.header.sr.long')}
-        = t('view.header.sr.short')
-      %a{:href => "https://asta.uni-bremen.de/", :title => t('view.header.asta.long')}
-        = t('view.header.asta.short')
-      %a{:href => "https://uni-bremen.de/"}
-        = t('view.header.unibremen')
-      -#%form#search.form-inline.float-right
-        %input.form-control{"aria-label" => t('view.header.search.label'), :placeholder => t('view.header.search.placeholder'), :type => "text"}/
-        %button.btn.btn-link{:type => "submit"}
+      - if request.path =~ /^\/admin/
+        %a{:href => stugen_path}
+          = t('helpers.titles.edit', model: t('activerecord.models.stuga.other'))
+        %a{:href => faculties_path}
+          = t('helpers.titles.edit', model: t('activerecord.models.faculty.other'))
+      - else
+        %a{:href => "https://stuko.stugen.de/", :title => t('view.header.stuko.long')}
+          = t('view.header.stuko.short')
+        %a{:href => "https://sr.uni-bremen.de/", :title => t('view.header.sr.long')}
+          = t('view.header.sr.short')
+        %a{:href => "https://asta.uni-bremen.de/", :title => t('view.header.asta.long')}
+          = t('view.header.asta.short')
+        %a{:href => "https://uni-bremen.de/"}
+          = t('view.header.unibremen')
+        -#%form#search.form-inline.float-right
+          %input.form-control{"aria-label" => t('view.header.search.label'), :placeholder => t('view.header.search.placeholder'), :type => "text"}/
+          %button.btn.btn-link{:type => "submit"}
+            %i.fa.fa-search
+        -#%a.btn.btn-link.pseudo-search{:href => '#search' }
           %i.fa.fa-search
-      -#%a.btn.btn-link.pseudo-search{:href => '#search' }
-        %i.fa.fa-search

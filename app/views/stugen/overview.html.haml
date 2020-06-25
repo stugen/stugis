@@ -8,17 +8,18 @@
     #{t('opening')}
 
 .overview
-  - @faculties.each do |fb|
-    .faculty{:class => "fb-#{fb.id}"}
-      %h3{:data => {:toggle => 'collapse', :target => ".fb-#{fb.id} .stugen-container"}}
+  - @stugen.each do |fb, stugen|
+    .faculty{:class => "fb-#{fb}"}
+      %h3{:data => {:toggle => 'collapse', :target => ".fb-#{fb} .stugen-container"}}
         %i.fa.fa-chevron-right
         = t('activerecord.models.faculty.one')
-        = fb.id
+        = fb
         &ndash;
-        = fb.label
+        = stugen.first[1]
       .container.stugen-container.collapse
-        .stugen{:class => "stugen-#{fb.stugen.count}"}
-          - fb.stugen.sort_by(&:label).each do |stuga|
+        .stugen{:class => "stugen-#{stugen.count}"}
+          - stugen.each do |stuga_entry|
+            - stuga = stuga_entry.first
             .stuga
               .stuga-body
                 %h4.stuga-title

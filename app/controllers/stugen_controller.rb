@@ -4,7 +4,7 @@ class StugenController < ApplicationController
 
   # GET /
   def overview
-     @faculties = Faculty.all.preload(:stugen)
+     @stugen = Stuga.all.order(:faculty_id, :label).joins(:faculty).select('stugen.*, faculties.*').map{|s|[s, s.faculty.label]}.group_by{|s, f| s.faculty_id}
      render layout: 'overview'
   end
 
