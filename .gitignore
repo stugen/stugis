@@ -26,3 +26,6 @@
 /yarn-error.log
 
 .byebug_history
+
+public/assets/
+.ruby-version
