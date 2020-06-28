@@ -54,9 +54,15 @@ de:
       expand_all: "Alle Einträge erweitern."
       information:
         title: "Hinweis"
-        confirmed_old_1: "Dieser Eintrag wurde zuletzt vor über einem Jahr aktuallisiert oder bestätigt. Die Informationen könnten mittlerweile veraltet sein. Als Mitglied des StugA [hilf mit](mailto:stugis@admin.stugen.de?subject=confirm %{stuga}) die Daten zu bestätigen/korrigieren um diese Meldung zu entfernen."
-        confirmed_old_2: "Dieser Eintrag wurde zuletzt vor über 2 Jahren aktuallisiert oder bestätigt. Die Informationen könnten mittlerweile veraltet sein. Als Mitglied des StugA [hilf mit](mailto:stugis@admin.stugen.de?subject=confirm %{stuga}) die Daten zu bestätigen/korrigieren um diese Meldung zu entfernen."
-        not_confirmed: "Dieser Eintrag wurde noch nicht von dem betreffenden StugA bestätigt. Die Informationen könnten falsch sein. Als Mitglied des StugA [hilf mit](mailto:stugis@admin.stugen.de?subject=confirm %{stuga}) die Daten zu bestätigen/korrigieren um diese Meldung zu entfernen."
+        confirmed_old_1: "Dieser Eintrag wurde zuletzt vor über einem Jahr aktualisiert oder bestätigt, die Informationen könnten daher mittlerweile veraltet sein.
+        Gehörst du zu %{stuga}? Dann bestätige/korrigiere den Eintrag über den per E-Mail erhaltenen Link.
+        Bei Problemen wende dich an die [Stugen Administratoren](mailto:stugis@admin.stugen.de)."
+        confirmed_old_2: "Dieser Eintrag wurde zuletzt vor über Zwei Jahren aktualisiert oder bestätigt, die Informationen könnten daher mittlerweile veraltet sein.
+        Gehörst du zu %{stuga}? Dann bestätige/korrigiere den Eintrag über den per E-Mail erhaltenen Link.
+        Bei Problemen wende dich an die [Stugen Administratoren](mailto:stugis@admin.stugen.de)."
+        not_confirmed: "Dieser Eintrag wurde bisher noch nicht bestätigt, die Informationen könnten daher falsch sein.
+        Gehörst du zu %{stuga}? Dann bestätige/korrigiere den Eintrag über den per E-Mail erhaltenen Link.
+        Bei Problemen wende dich an die [Stugen Administratoren](mailto:stugis@admin.stugen.de)."
   breadcrumbs:
     application:
       root: "Index"
