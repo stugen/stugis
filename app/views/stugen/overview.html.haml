@@ -4,8 +4,7 @@
     %i.fa.fa-angle-double-down
 
 .container
-  :markdown
-    #{t('opening')}
+  = Kramdown::Document.new(t('opening')).to_html.html_safe
 
 .overview
   - @stugen.each do |fb, stugen|
@@ -29,8 +28,7 @@
                       %span
                         = succeed ': ' do
                           = t('view.overview.information.title')
-                    :markdown
-                      #{t('view.overview.information.not_confirmed', stuga: stuga.label)}
+                      = Kramdown::Document.new(t('view.overview.information.not_confirmed', stuga: stuga.label)).to_html.html_safe
                 - else
                   - if stuga.updated_at < (Date.today - 2.years)
                     .stuga-text.stuga-not-confirmed.font-italic.alert.alert-danger
@@ -38,16 +36,14 @@
                         %span
                           = succeed ': ' do
                             = t('view.overview.information.title')
-                      :markdown
-                        #{t('view.overview.information.confirmed_old_2', stuga: stuga.label)}
+                      = Kramdown::Document.new(t('view.overview.information.confirmed_old_2', stuga: stuga.label)).to_html.html_safe
                   - elsif stuga.updated_at < (Date.today - 12.months)
                     .stuga-text.stuga-not-confirmed.font-italic.alert.alert-warning
                       %i.fa.fa-exclamation-triangle
                         %span
                           = succeed ': ' do
-                            = t('view.overview.information..title')
-                      :markdown
-                        #{t('view.overview.information.confirmed_old_1', stuga: stuga.label)}
+                            = t('view.overview.information.title')
+                      = Kramdown::Document.new(t('view.overview.information.confirmed_old_1', stuga: stuga.label)).to_html.html_safe
                 - unless stuga.information.blank?
                   .stuga-text.stuga-not-confirmed.font-italic.alert.alert-info
                     %i.fa.fa-info-circle
@@ -100,5 +96,4 @@
                     = sm_entry stuga, sm.to_s
 
 .container
-  :markdown
-    #{t('closing')}
+  = Kramdown::Document.new(t('closing')).to_html.html_safe
