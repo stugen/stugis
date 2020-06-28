@@ -54,7 +54,7 @@
                       %span
                         = succeed ': ' do
                           = t('view.overview.information.title')
-                    = Kramdown::Document.new(stuga.information).to_html.html_safe
+                      = sanitize Kramdown::Document.new(stuga.information, {remove_block_html_tags: true}).to_html.html_safe
                 .stuga-text
                   - unless (stuga.building.blank? and stuga.room.blank?)
                     %a{:target => '_blank', :href => "http://oracle-web.zfn.uni-bremen.de/lageplan/lageplan?haus=#{stuga.building}&raum=#{stuga.room}&pi_anz=0"}

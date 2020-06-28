@@ -28,6 +28,8 @@ module Stugis
     # Don't generate system test files.
     config.generators.system_tests = nil
 
+    config.action_view.sanitized_allowed_attributes = %w(href target class src alt title abbr height width)
+
     config.i18n.default_locale = :de
     config.i18n.fallbacks = [:en]
   end

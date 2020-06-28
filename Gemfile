@@ -8,6 +8,7 @@ end
 gem 'figaro'
 gem 'seed_dump'
 gem 'kramdown'
+gem 'rails-html-sanitizer'
 gem 'irb'
 gem 'e2mmap'
 gem 'haml-rails'
