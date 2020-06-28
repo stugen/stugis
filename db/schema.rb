@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200615135649) do
+ActiveRecord::Schema.define(version: 2020_06_28_182610) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
   enable_extension "pgcrypto"
+  enable_extension "plpgsql"
 
   create_table "faculties", force: :cascade do |t|
     t.string "label"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "label_en"
   end
 
   create_table "stugen", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|

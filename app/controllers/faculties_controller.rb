@@ -4,7 +4,7 @@ class FacultiesController < ApplicationController
   # GET /faculties
   # GET /faculties.json
   def index
-    @faculties = Faculty.all
+    @faculties = Faculty.all.order(:id)
   end
 
   # GET /faculties/1
@@ -69,6 +69,6 @@ class FacultiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def faculty_params
-      params.require(:faculty).permit(:nr, :label)
+      params.require(:faculty).permit(:label, :label_en)
     end
 end

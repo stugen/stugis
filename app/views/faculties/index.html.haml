@@ -6,6 +6,7 @@
     %tr
       %th= model_class.human_attribute_name(:id)
       %th= model_class.human_attribute_name(:label)
+      %th= model_class.human_attribute_name(:label_en)
       %th= model_class.human_attribute_name(:created_at)
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
@@ -13,6 +14,7 @@
       %tr
         %td= link_to faculty.id, faculty_path(faculty)
         %td= link_to faculty.label, faculty_path(faculty)
+        %td= faculty.label_en
         %td=l faculty.created_at
         %td
           = link_to t('.show', :default => t("helpers.links.show")), faculty_path(faculty), :class => 'btn btn-default btn-xs'
