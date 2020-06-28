@@ -20,6 +20,9 @@ de:
   Verbesserungsvorschläge aller Art sind bitte an die Kontaktadresse [stugis@admin.stugen.de](mailto:stugis@admin.stugen.de) zu richten.
   Über diese Adresse ist **keine** Kontaktaufnahme zu den Stugen möglich, bitte hierzu die angegebenen Adressen oder [stuko@stugen.de](mailto:stuko@stugen.de) verwenden.
   Sollten Informationen auf dieser Seite inkorrekt bzw. veraltet sein ergreife die Initiative und bearbeite sie bzw. melde uns dies, damit wir die Seite gemeinsam aktuell halten können."
+  mail:
+    subjects:
+      notification: "Überprüfen eurer Daten auf stugen.de"
   pagetitles:
     general_details: "Allgemeine Informationen"
     contact_details: "Kontaktinformationen"
@@ -48,7 +51,7 @@ de:
         placeholder: "StugA suchen"
     messages:
       verified: "Vielen Dank für die Bestätigung der Daten von %{stuga}!"
-      updated: "Vielen Dank für die Aktuallisierung der Daten von %{stuga}! Eine Bestätigung der Änderungen wurde an %{email} versandt."
+      updated: "Vielen Dank für die Aktualisierung der Daten von %{stuga}! Eine Bestätigung der Änderungen wurde an %{email} versandt."
     overview:
       title: "Stugen / Fachschaften an der Universität Bremen"
       expand_all: "Alle Einträge erweitern."
@@ -85,55 +88,3 @@ de:
       verify: "%{model} bestätigen und speichern"
       new: "%{model} anlegen"
       delete: "%{model} entfernen"
-  activerecord:
-    models:
-      faculty:
-        one: "Fachbereich"
-        other: "Fachbereiche"
-      stuga:
-        one: "StugA"
-        other: "Stugen"
-    attributes:
-      stuga:
-        label: "Name"
-        label_help: "(inkl. StugA, Fachschaft o.Ä.)"
-        abbreviation: "Kurform"
-        abbreviation_help: "(inkl. StugA, Fachschaft o.Ä.)"
-        faculty_id: "Fachbereich"
-        information: "Hinweistext"
-        information_help: "(z.B. bei besonderen Situationen wie Umzug durch Umbau o.Ä., Markdown-Unterstützung)"
-        website: "Homepage"
-        website_help: "(nach Möglichkeit `https://*.stugen.de` oder `https://*.uni-bremen.de`)"
-        email: "E-Mail"
-        email_help: "(nach Möglichkeit `*@stugen.de` oder `*@uni-bremen.de`)"
-        telephone: "Telefon"
-        telephone_help: "(Kurzwahl im Uninetz, d.h. ohne \"(0421) 218-\")"
-        building: "Gebäude"
-        building_help: "(wie in der [Raumsuche](https://oracle-web.zfn.uni-bremen.de/web/p_ebenen_ansicht){:target='_blank'} der Uni)"
-        room: "Raum"
-        room_help: "(wie in der [Raumsuche](https://oracle-web.zfn.uni-bremen.de/web/p_ebenen_ansicht){:target='_blank'} der Uni)"
-        facebook: "Facebook"
-        facebook_help: "(`https://www.facebook.com/<StugA>/`)"
-        twitter: "Twitter"
-        twitter_help: "(`https://twitter.com/<StugA>/`)"
-        youtube: "YouTube"
-        youtube_help: "(`https://www.youtube.com/<StugA>/`)"
-        instagram: "Instagram"
-        instagram_help: "(`https://www.instagram.com/<StugA>/`)"
-        pinterest: "Pinterest"
-        pinterest_help: "(`https://www.pinterest.de/<StugA>/`)"
-        snapchat: "Snapchat"
-        snapchat_help: "(`https://www.snapchat.com/add/<StugA>/`)"
-        tumblr: "Tumblr"
-        tumblr_help: "(`https://<StugA>.tumblr.com/`)"
-        confirmed: "Daten vom StugA initial bestätigt"
-        verification_token: "Verifikationstoken"
-        verification_link: "Link zur Selbstverifikation des StugA - Achtung: Beim Aufrufen wird der StugA ohne Rückfrage bestätigt, also nicht von Administratorseite aus aufrufen."
-        verification_edit: "Link zur Datenpflege des StugA"
-        updated_at: "Aktuallisiert am"
-        created_at: "Erzeugt am"
-      faculty:
-        id: "Nummer"
-        label: "Bezeichnung"
-        updated_at: "Aktuallisiert am"
-        created_at: "Erzeugt am"

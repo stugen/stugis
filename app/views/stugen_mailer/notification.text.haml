@@ -1,0 +1,102 @@
+- fields = %w(telephone building room website facebook twitter youtube instagram pinterest snapchat tumblr)
+- blank_fields = []
+- I18n.locale = :de
+\~~~ English version see below ~~~
+\
+Moin #{@stuga.label},
+\
+einmal pro Semester erhaltet ihr diese Mail als Erinnerung eure auf https://stugen.de/ hinterlegten Daten zu kontrollieren.
+\
+Aktuell haben wir für euch folgendes gespeichert:
+- fields.each do |f|
+  - unless @stuga.try(f).blank?
+    #{t("activerecord.attributes.stuga.#{f}")}: #{@stuga.try(f)}
+  - else
+    - blank_fields << f
+- unless @stuga.information.blank?
+  \
+  Außerdem ist folgender Hinweistext hinterlegt, diese Texte sollten nur temporär wichtige Informationen enthalten:
+  =raw "#{@stuga.information}"
+  \-Ende des Hinweistextes-
+- if @stuga.information.blank? or not blank_fields.empty?
+  \
+- unless blank_fields.empty?
+  Wusstet ihr auch, dass ihr noch folgende Infos aufführen lassen könnt?
+  = "  #{blank_fields.map{|f| t("activerecord.attributes.stuga.#{f}")}.join(', ')}"
+- if @stuga.information.blank?
+  Ihr habt außerdem die Möglichkeit einen kurzen Hinweistext bspw. bei temporären, akuten Änderungen zu hinterlegen.
+\
+\
+Sind die Daten noch korrekt? Super, dann einfach mit einem Klick bestätigen:
+https://stugen.de/verify/#{@stuga.id}/#{@stuga.verification_token}
+\
+Es stimmt nicht mehr alles? Dann direkt bearbeiten:
+https://stugen.de/verify/#{@stuga.id}/edit/#{@stuga.verification_token}
+Nach einer Änderung bekommt ihr den gesamten Datensatz noch einmal als Bestätigung zugesandt.
+\
+\
+Bitte beachtet, dass wir außerdem folgende Informationen hinterlegt haben, die ihr nicht selbstständig anpassen könnt:
+#{t('activerecord.attributes.stuga.label')}: #{@stuga.label}
+#{t('activerecord.attributes.stuga.abbreviation')}: #{@stuga.abbreviation}
+#{t('activerecord.attributes.stuga.faculty_id')}: #{@stuga.faculty_id} #{@stuga.faculty.label}
+#{t('activerecord.attributes.stuga.email')}: #{@stuga.email}
+\
+Kontaktiert uns im Falle von Änderungen bitte direkt, z.B. als Antwort auf diese E-Mail.
+Bitte beachtet, dass wir eine Anpassung der E-Mailadresse aus naheliegenden Gründen nur nach persönlicher Verifikation durchführen werden.
+\
+\
+Beste Grüße
+Stugen-Administratoren
+c/o StugA Informatik
+\
+- fields = %w(telephone building room website facebook twitter youtube instagram pinterest snapchat tumblr)
+- blank_fields = []
+- I18n.locale = :en
+\~~~ English version ~~~
+\
+Moin #{@stuga.label},
+\
+once per semester you are reminded to check your information on https://stugen.de/.
+\
+Currently we have saved the following for you:
+- fields.each do |f|
+  - unless @stuga.try(f).blank?
+    #{t("activerecord.attributes.stuga.#{f}")}: #{@stuga.try(f)}
+  - else
+    - blank_fields << f
+- unless @stuga.information.blank?
+  \
+  In addition the following information text is stored, these textx should only contain temporarily important information:
+  =raw "#{@stuga.information}"
+  \-end of the note-
+- if @stuga.information.blank? or not blank_fields.empty?
+  \
+- unless blank_fields.empty?
+  Did you also know that you can still have the following information listet?
+  = "  #{blank_fields.map{|f| t("activerecord.attributes.stuga.#{f}")}.join(', ')}"
+- if @stuga.information.blank?
+  You also have the possibility to add a short note e.g. for temporary, acute changes.
+\
+\
+Is the information still correct? Great, then simply confirm with a click:
+https://stugen.de/verify/#{@stuga.id}/#{@stuga.verification_token}
+\
+Not everything is correct anymore? Then edit directly:
+https://stugen.de/verify/#{@stuga.id}/edit/#{@stuga.verification_token}
+Currentyl this interface is only available in German, but we're working on it in addition to the possibility to provide German and English information texts.
+After a change, you will receive the entire data record again as confirmation.
+\
+\
+Please note that we have also added the following information, which you cannot change on your own:
+#{t('activerecord.attributes.stuga.label')}: #{@stuga.label}
+#{t('activerecord.attributes.stuga.abbreviation')}: #{@stuga.abbreviation}
+#{t('activerecord.attributes.stuga.faculty_id')}: #{@stuga.faculty_id} #{@stuga.faculty.label_en}
+#{t('activerecord.attributes.stuga.email')}: #{@stuga.email}
+\
+Please contact us directly in case of changes, e.g. in response to this e-mail.
+Please note that for obvious reasons we will only adjust the e-mail address after personal verification.
+\
+\
+Best Regards
+Stugen-Administrators
+c/o StugA Informatik/Computer Science

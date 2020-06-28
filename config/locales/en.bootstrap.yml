@@ -2,6 +2,70 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  title: "Stugen-Portal"
+  opening: "Eine Fachschaft (im Bremischen Studiengangsausschuss oder kurz **StugA**, in Mehrzahl **Stugen**) ist die studentische Vertretung auf Fächerebene und als solche erster Ansprechpartner für alle Studierenen bei Fragen zum Studienablauf und Problemen während des Studiums. Viele Stugen stellen auch die studentischen Mitglieder der diversen Fachbereichsgremien wie den Studiengangskommissionen, Prüfungsausschüssen u.v.m. Außerdem organisieren die Stugen viele Veranstaltungen zur Einführung ins Studium oder auch im weiteren Verlauf.
+  <br>
+  Alle Stugen (und andere Interessierte im Umfeld der Stugen) können über die Mailingliste [stuko@stugen.de](mailto:stuko@stugen.de) mit [Selbsteintragung](https://mailman.zfn.uni-bremen.de/cgi-bin/mailman/listinfo/stugen){:target='_blank'} erreicht werden. Die Mailingliste ist für Universitätsexterne moderiert und Werbung ist expliziet nicht erwünscht. Da eine Eintragung (und Austragung) auf eigenen Wunsch der Stugen und Einzelpersonen jederzeit möglicht ist wird nicht garantiert, jeden StugA über diese Liste zu erreichen. Wenn bestimmte Stugen kontaktiert werden sollen bitte auf die unten stehenden Kontaktdaten zurückgreifen.
+  <br/>
+  Über das [Stugen-Wiki](https://wiki.stugen.de/) werden z.B. die Einladungen und Protokolle der Stugenkonferenz (StuKo) veröffentlicht, außerdem sind dort weitere Informationen für die aktive Mitarbeit in Stugen zusammengetragen."
+  closing: "Diese Seite wird technisch von den [Stugen Administratoren](mailto:stugis@admin.stugen.de) betreut und auf Zuruf gepflegt. Außerdem erhalten die Stugen regelmäßig eine Aufforderung zur selbstständigen Datenpflege per E-Mail.
+  Informationen welche auf Wunsch der Stugen aktuell erfasst und (öffentlich) dargestellt werden können umfassen:
+    *Name\\**, *zugehöriger Fachbereich\\**, *E-Mailadresse\\**,
+    Hinweistext,
+    Telefon, Gebäude, Raum,
+    Homepage und diverse Social-Media-Profile (Facebook, Twitter, YouTube, Instagram, Pinterest, Snapchat und Tumblr).
+    Die mit einem Stern (\\*) versehenen Daten können von den Stugen nicht selbstständig angepasst werden, hierzu bitte an die [Stugen Administratoren](mailto:stugis@admin.stugen.de) wenden.
+    Alle übrigen Daten können über den regelmäßig an die hinterlegte E-Mailadresse versandten Link zur Datenpflege von den Stugen selbstständig angepasst werden.
+  <br />
+  Verbesserungsvorschläge aller Art sind bitte an die Kontaktadresse [stugis@admin.stugen.de](mailto:stugis@admin.stugen.de) zu richten.
+  Über diese Adresse ist **keine** Kontaktaufnahme zu den Stugen möglich, bitte hierzu die angegebenen Adressen oder [stuko@stugen.de](mailto:stuko@stugen.de) verwenden.
+  Sollten Informationen auf dieser Seite inkorrekt bzw. veraltet sein ergreife die Initiative und bearbeite sie bzw. melde uns dies, damit wir die Seite gemeinsam aktuell halten können."
+  mail:
+    subjects:
+      notification: "Check your information on stugen.de"
+  pagetitles:
+    general_details: "Allgemeine Informationen"
+    contact_details: "Kontaktinformationen"
+    link_list: "Links zu Onlineauftritten (Homepage, Social Media, o.Ä.)"
+  view:
+    footer:
+      stuga_missing: "Dein StugA fehlt?"
+      stuga_wrong_information: "Falsche Informationen melden!"
+      stuga_admins: "Stugen Administratoren"
+      privacy: "Datenschutzerklärung"
+      imprint: "Impressum"
+    header:
+      stugen: "Stugen"
+      stuko:
+        short: "StuKo"
+        long: "Stugenkonferenz"
+      sr:
+        short: "SR"
+        long: "Studierendenrat"
+      asta:
+        short: "AStA"
+        long: "Allgemeiner Studierendenausschuss"
+      unibremen: "Universität Bremen"
+      search:
+        label: "Seite durchsuchen"
+        placeholder: "StugA suchen"
+    messages:
+      verified: "Thank you very much for verifying the information from %{stuga}!"
+      updated: "Thank you very much for updating the information from %{stuga}! A confirmation of the changes was sent to %{email}."
+    overview:
+      title: "Stugen / Fachschaften an der Universität Bremen"
+      expand_all: "Alle Einträge erweitern."
+      information:
+        title: "Hinweis"
+        confirmed_old_1: "Dieser Eintrag wurde zuletzt vor über einem Jahr aktualisiert oder bestätigt, die Informationen könnten daher mittlerweile veraltet sein.
+        Gehörst du zu %{stuga}? Dann bestätige/korrigiere den Eintrag über den per E-Mail erhaltenen Link.
+        Bei Problemen wende dich an die [Stugen Administratoren](mailto:stugis@admin.stugen.de)."
+        confirmed_old_2: "Dieser Eintrag wurde zuletzt vor über Zwei Jahren aktualisiert oder bestätigt, die Informationen könnten daher mittlerweile veraltet sein.
+        Gehörst du zu %{stuga}? Dann bestätige/korrigiere den Eintrag über den per E-Mail erhaltenen Link.
+        Bei Problemen wende dich an die [Stugen Administratoren](mailto:stugis@admin.stugen.de)."
+        not_confirmed: "Dieser Eintrag wurde bisher noch nicht bestätigt, die Informationen könnten daher falsch sein.
+        Gehörst du zu %{stuga}? Dann bestätige/korrigiere den Eintrag über den per E-Mail erhaltenen Link.
+        Bei Problemen wende dich an die [Stugen Administratoren](mailto:stugis@admin.stugen.de)."
   breadcrumbs:
     application:
       root: "Index"
@@ -12,12 +76,15 @@ en:
     links:
       back: "Back"
       cancel: "Cancel"
+      show: "Show"
       confirm: "Are you sure?"
       destroy: "Delete"
       new: "New"
       edit: "Edit"
     titles:
+      show: "Show %{model}"
       edit: "Edit %{model}"
       save: "Save %{model}"
+      verify: "Confirm and save %{model}"
       new: "New %{model}"
       delete: "Delete %{model}"

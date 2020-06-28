@@ -1,0 +1,57 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  activerecord:
+    models:
+      faculty:
+        one: "Faculty"
+        other: "Faculties"
+      stuga:
+        one: "StugA"
+        other: "Stugen"
+    attributes:
+      stuga:
+        label: "Name"
+        label_help: "(inkl. StugA, Fachschaft o.Ä.)"
+        abbreviation: "Abbreviation"
+        abbreviation_help: "(inkl. StugA, Fachschaft o.Ä.)"
+        faculty_id: "Faculty"
+        information: "Information Text"
+        information_help: "(z.B. bei besonderen Situationen wie Umzug durch Umbau o.Ä., Markdown-Unterstützung)"
+        website: "Homepage"
+        website_help: "(nach Möglichkeit `https://*.stugen.de` oder `https://*.uni-bremen.de`)"
+        email: "E-Mail"
+        email_help: "(nach Möglichkeit `*@stugen.de` oder `*@uni-bremen.de`)"
+        telephone: "Telephone"
+        telephone_help: "(Kurzwahl im Uninetz, d.h. ohne \"(0421) 218-\")"
+        building: "Building"
+        building_help: "(wie in der [Raumsuche](https://oracle-web.zfn.uni-bremen.de/web/p_ebenen_ansicht){:target='_blank'} der Uni, bspw. MZH, GRAZ, SpT, GW2, ...)"
+        room: "Room"
+        room_help: "(wie in der [Raumsuche](https://oracle-web.zfn.uni-bremen.de/web/p_ebenen_ansicht){:target='_blank'} der Uni)"
+        facebook: "Facebook"
+        facebook_help: "(`https://www.facebook.com/<StugA>/`)"
+        twitter: "Twitter"
+        twitter_help: "(`https://twitter.com/<StugA>/`)"
+        youtube: "YouTube"
+        youtube_help: "(`https://www.youtube.com/<StugA>/`)"
+        instagram: "Instagram"
+        instagram_help: "(`https://www.instagram.com/<StugA>/`)"
+        pinterest: "Pinterest"
+        pinterest_help: "(`https://www.pinterest.de/<StugA>/`)"
+        snapchat: "Snapchat"
+        snapchat_help: "(`https://www.snapchat.com/add/<StugA>/`)"
+        tumblr: "Tumblr"
+        tumblr_help: "(`https://<StugA>.tumblr.com/`)"
+        confirmed: "Daten vom StugA initial bestätigt"
+        verification_token: "Verification token"
+        verification_link: "Link zur Selbstverifikation des StugA - Achtung: Beim Aufrufen wird der StugA ohne Rückfrage bestätigt, also nicht von Administratorseite aus aufrufen."
+        verification_edit: "Link zur Datenpflege des StugA"
+        updated_at: "Updated at"
+        created_at: "Created at"
+      faculty:
+        id: "Number"
+        label: "Label (de)"
+        label_en: "Label (en)"
+        updated_at: "Updated at"
+        created_at: "Created at"
