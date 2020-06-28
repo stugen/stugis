@@ -15,11 +15,10 @@
         = t('activerecord.models.faculty.one')
         = fb
         &ndash;
-        = stugen.first[1]
+        = stugen.first.faculty_label
       .container.stugen-container.collapse
         .stugen{:class => "stugen-#{stugen.count}"}
-          - stugen.each do |stuga_entry|
-            - stuga = stuga_entry.first
+          - stugen.each do |stuga|
             .stuga
               .stuga-body
                 %h4.stuga-title
