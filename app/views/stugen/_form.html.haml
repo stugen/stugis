@@ -38,9 +38,22 @@
           = f.text_area :information, class: 'form-control', rows: 3, style: 'resize: vertical;'
       - unless verify
         .form-row
-          .form-group.col
+          .form-group.col.col-sm-4
             = f.label :confirmed
             = f.check_box :confirmed
+          .form-group.col.col-sm-8
+            = f.label :verification_token
+            = f.text_field :verification_token, class: 'form-control', readonly: true
+        .form-row
+          .form-group.col
+            = f.label :verification_link
+            %span{class: 'form-control', readonly: true}
+              = "https://stugen.de/verify/#{@stugen.id}/#{@stugen.verification_token}"
+        .form-row
+          .form-group.col
+            = f.label :verification_edit
+            %span{class: 'form-control', readonly: true}
+              = "https://stugen.de/verify/#{@stugen.id}/edit/#{@stugen.verification_token}"
   .faculty
     %h3
       = t('pagetitles.contact_details')

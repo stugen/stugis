@@ -108,6 +108,9 @@ Alle Stugen (und andere Interessierte im Umfeld der Stugen) können über die Ma
         tumblr: "Tumblr"
         tumblr_help: "(`https://<StugA>.tumblr.com/`)"
         confirmed: "Daten vom StugA initial bestätigt"
+        verification_token: "Verifikationstoken"
+        verification_link: "Link zur Selbstverifikation des StugA - Achtung: Beim Aufrufen wird der StugA ohne Rückfrage bestätigt, also nicht von Administratorseite aus aufrufen."
+        verification_edit: "Link zur Datenpflege des StugA"
         updated_at: "Aktuallisiert am"
         created_at: "Erzeugt am"
       faculty:
