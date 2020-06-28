@@ -2,8 +2,9 @@
   .container
     %a{:href => 'mailto:stugis@admin.stugen.de?Subject=StugA missing'}
       = t('view.footer.stuga_missing')
-    %a{:href => 'mailto:stugis@admin.stugen.de?Subject=StugA information wrong'}
-      = t('view.footer.stuga_wrong_information')
+    -#
+      %a{:href => 'mailto:stugis@admin.stugen.de?Subject=StugA information wrong'}
+        = t('view.footer.stuga_wrong_information')
     %a{:href => 'https://admin.stugen.de/'}
       = t('view.footer.stuga_admins')
     %a{:href => 'https://q-web.admin.stugen.de/datenschutz.html'}
