@@ -82,6 +82,7 @@ class StugenController < ApplicationController
     @sp[:confirmed] = true
     respond_to do |format|
       if @stugen.update(@sp)
+        @stugen.touch
         format.html { redirect_to :root, notice: t("view.messages.#{msg}", stuga: @stugen.label, email: @stugen.email) }
         format.json { render :show, status: :ok, location: :root }
       else
