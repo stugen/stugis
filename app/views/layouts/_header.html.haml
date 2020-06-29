@@ -4,15 +4,9 @@
       %ul#meta_menu.meta-menu
         %li.tx-srlanguagemenu.tx-srlanguagemenu-links
           %div
-            - if I18n.locale == :de
-              DE
-            - else
-              = link_to('DE', url_for(locale: :de))
+            = link_to_unless(I18n.locale == :de, 'DE', url_for(locale: :de))
           %div
-            - if I18n.locale == :en
-              EN
-            - else
-              = link_to('EN', url_for(locale: :en))
+            = link_to_unless(I18n.locale == :en, 'EN', url_for(locale: :en))
         %li
           = link_to(t('view.header.internal'), admin_url)
 %header.header
