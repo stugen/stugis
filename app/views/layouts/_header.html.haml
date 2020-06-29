@@ -1,3 +1,20 @@
+.container.meta
+  .row
+    .col
+      %ul#meta_menu.meta-menu
+        %li.tx-srlanguagemenu.tx-srlanguagemenu-links
+          %div
+            - if I18n.locale == :de
+              DE
+            - else
+              = link_to('DE', url_for(locale: :de))
+          %div
+            - if I18n.locale == :en
+              EN
+            - else
+              = link_to('EN', url_for(locale: :en))
+        %li
+          = link_to(t('view.header.internal'), admin_url)
 %header.header
   .container
     %button.navbar-toggle.collapsed{:type => "button", :data => {:toggle => "collapse", :target => "#navigation"}, :aria => {:expanded => "false"}}
@@ -10,7 +27,7 @@
     #navigation.collapse
       %a.current{:href => "https://stugen.de/"}
         = t('view.header.stugen')
-      - if request.path =~ /^\/admin/
+      - if request.path =~ /\/admin/
         %a{:href => stugen_path}
           = t('helpers.titles.edit', model: t('activerecord.models.stuga.other'))
         %a{:href => faculties_path}

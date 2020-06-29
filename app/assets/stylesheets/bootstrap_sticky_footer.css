@@ -226,6 +226,38 @@ body > .container {
 .header img {
     height: 40px;
 }
+ul#meta_menu {
+  list-style-type: none;
+  text-align: right;
+  max-width: 1190px;
+  margin: 0 auto;
+  color: #21467a;
+  float: right;
+}
+ul#meta_menu li.tx-srlanguagemenu {
+  line-height: 24px;
+}
+ul#meta_menu li.tx-srlanguagemenu > div {
+  margin: 0;
+  margin-bottom: -1px;
+  float: left;
+  padding: 0 5px;
+}
+ul#meta_menu li:first-of-type {
+  padding: 0 8px 0 0;
+}
+ul#meta_menu li:last-of-type {
+  padding: 0 0 0 8px;
+}
+ul#meta_menu li {
+  display: inline-block;
+  padding: 0 8px;
+  vertical-align: middle;
+}
+ul#meta_menu li a {
+  color: #21467a;
+  background-color: transparent;
+}
 
 code {
   font-size: 80%;

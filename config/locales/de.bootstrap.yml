@@ -35,6 +35,7 @@ de:
       privacy: "Datenschutzerklärung"
       imprint: "Impressum"
     header:
+      internal: "Intern"
       stugen: "Stugen"
       stuko:
         short: "StuKo"
