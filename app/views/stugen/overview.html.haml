@@ -14,7 +14,7 @@
         = t('activerecord.models.faculty.one')
         = fb
         &ndash;
-        = stugen.first.faculty_label
+        = stugen.first.try("faculty_label_#{I18n.locale.to_s}")
       .container.stugen-container.collapse
         .stugen{:class => "stugen-#{stugen.count}"}
           - stugen.each do |stuga|
