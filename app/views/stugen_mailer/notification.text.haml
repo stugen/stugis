@@ -38,7 +38,7 @@ Nach einer Änderung bekommt ihr den gesamten Datensatz noch einmal als Bestäti
 Bitte beachtet, dass wir außerdem folgende Informationen hinterlegt haben, die ihr nicht selbstständig anpassen könnt:
 #{t('activerecord.attributes.stuga.label')}: #{@stuga.label}
 #{t('activerecord.attributes.stuga.abbreviation')}: #{@stuga.abbreviation}
-#{t('activerecord.attributes.stuga.faculty_id')}: #{@stuga.faculty_id} #{@stuga.faculty.label}
+#{t('activerecord.attributes.stuga.faculty_id')}: #{@stuga.faculty_id} #{@stuga.faculty.label} (#{@stuga.faculty.label_en})
 #{t('activerecord.attributes.stuga.email')}: #{@stuga.email}
 \
 Kontaktiert uns im Falle von Änderungen bitte direkt, z.B. als Antwort auf diese E-Mail.
@@ -46,7 +46,7 @@ Bitte beachtet, dass wir eine Anpassung der E-Mailadresse aus naheliegenden Grü
 \
 \
 Beste Grüße
-Stugen-Administratoren
+Stugen Administratoren
 c/o StugA Informatik
 \
 - fields = %w(telephone building room website facebook twitter youtube instagram pinterest snapchat tumblr)
@@ -56,7 +56,7 @@ c/o StugA Informatik
 \
 Moin #{@stuga.label},
 \
-once per semester you are reminded to check your information on https://stugen.de/.
+once per semester you are reminded to check your information on https://stugen.de/en/.
 \
 Currently we have saved the following for you:
 - fields.each do |f|
@@ -79,18 +79,18 @@ Currently we have saved the following for you:
 \
 \
 Is the information still correct? Great, then simply confirm with a click:
-https://stugen.de/verify/#{@stuga.id}/#{@stuga.verification_token}
+https://stugen.de/en/verify/#{@stuga.id}/#{@stuga.verification_token}
 \
 Not everything is correct anymore? Then edit directly:
-https://stugen.de/verify/#{@stuga.id}/edit/#{@stuga.verification_token}
-Currentyl this interface is only available in German, but we're working on it in addition to the possibility to provide German and English information texts.
+https://stugen.de/en/verify/#{@stuga.id}/edit/#{@stuga.verification_token}
+Currentyl some information (name of StugA, information text, etc.) is only available in German, but we're working on it in addition to the translation of the explanatory texts.
 After a change, you will receive the entire data record again as confirmation.
 \
 \
 Please note that we have also added the following information, which you cannot change on your own:
 #{t('activerecord.attributes.stuga.label')}: #{@stuga.label}
 #{t('activerecord.attributes.stuga.abbreviation')}: #{@stuga.abbreviation}
-#{t('activerecord.attributes.stuga.faculty_id')}: #{@stuga.faculty_id} #{@stuga.faculty.label_en}
+#{t('activerecord.attributes.stuga.faculty_id')}: #{@stuga.faculty_id} #{@stuga.faculty.label_en} (#{@stuga.faculty.label})
 #{t('activerecord.attributes.stuga.email')}: #{@stuga.email}
 \
 Please contact us directly in case of changes, e.g. in response to this e-mail.
@@ -98,5 +98,5 @@ Please note that for obvious reasons we will only adjust the e-mail address afte
 \
 \
 Best Regards
-Stugen-Administrators
+Stugen Administrators
 c/o StugA Informatik/Computer Science
