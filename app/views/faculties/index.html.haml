@@ -12,12 +12,11 @@
   %tbody
     - @faculties.each do |faculty|
       %tr
-        %td= link_to faculty.id, faculty_path(faculty)
-        %td= link_to faculty.label, faculty_path(faculty)
+        %td= link_to faculty.id, edit_faculty_path(faculty)
+        %td= link_to faculty.label, edit_faculty_path(faculty)
         %td= faculty.label_en
         %td=l faculty.created_at
         %td
-          = link_to t('.show', :default => t("helpers.links.show")), faculty_path(faculty), :class => 'btn btn-default btn-xs'
           = link_to t('.edit', :default => t("helpers.links.edit")), edit_faculty_path(faculty), :class => 'btn btn-default btn-xs'
           = link_to t('.destroy', :default => t("helpers.links.destroy")), faculty_path(faculty), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
 
