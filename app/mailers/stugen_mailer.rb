@@ -1,7 +1,7 @@
 class StugenMailer < ApplicationMailer
   def notification
     @stuga = params[:stuga]
-    mail(to: "#{@stuga.label} <#{@stuge.email}>", cc: 'schuerholz+stugis_notification@uni-bremen.de', subject: "#{t('mail.subjects.notification', locale: :de)} / #{t('mail.subjects.notification', locale: :en)}")
+    mail(to: "#{@stuga.label} <#{@stuga.email}>", cc: 'schuerholz+stugis_notification@uni-bremen.de', subject: "#{t('mail.subjects.notification', locale: :de)} / #{t('mail.subjects.notification', locale: :en)}")
   end
 
   def confirmation
