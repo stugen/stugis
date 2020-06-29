@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get ':locale' => 'stugen#overview'
+  get ':locale' => 'stugen#overview', as: 'root'
   root 'stugen#overview'
   scope '(:locale)', locale: /de|en/ do
     scope :verify do

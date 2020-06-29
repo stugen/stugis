@@ -25,8 +25,7 @@
     .navbar-brand.navbar-title
       = raw t('title')
     #navigation.collapse
-      %a.current{:href => "https://stugen.de/"}
-        = t('view.header.stugen')
+      = link_to(t('view.header.stugen'), root_url, class: 'current')
       - if request.path =~ /\/admin/
         %a{:href => stugen_path}
           = t('helpers.titles.edit', model: t('activerecord.models.stuga.other'))
