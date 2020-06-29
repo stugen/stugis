@@ -12,12 +12,12 @@ de:
         other: "Stugen"
     attributes:
       stuga:
-        label: "Name"
+        label: "Name (de)"
         label_help: "(inkl. StugA, Fachschaft o.Ä.)"
-        abbreviation: "Kurform"
+        abbreviation: "Kurform (de)"
         abbreviation_help: "(inkl. StugA, Fachschaft o.Ä.)"
         faculty_id: "Fachbereich"
-        information: "Hinweistext"
+        information: "Hinweistext (de)"
         information_help: "(z.B. bei besonderen Situationen wie Umzug durch Umbau o.Ä., Markdown-Unterstützung)"
         website: "Homepage"
         website_help: "(nach Möglichkeit `https://*.stugen.de` oder `https://*.uni-bremen.de`)"
