@@ -23,6 +23,7 @@ de:
   mail:
     subjects:
       notification: "Überprüfen eurer Daten auf stugen.de"
+      confirmation: "Änderung eurer Daten auf stugen.de"
   pagetitles:
     general_details: "Allgemeine Informationen"
     contact_details: "Kontaktinformationen"

@@ -23,6 +23,7 @@ en:
   mail:
     subjects:
       notification: "Check your information on stugen.de"
+      confirmation: "Your updated information on stugen.de"
   pagetitles:
     general_details: "General information"
     contact_details: "Contact details"
