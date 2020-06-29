@@ -60,7 +60,7 @@
                             = t('activerecord.attributes.stuga.room')
                       %span
                         - unless stuga.room.blank?
-                          = succeed ', Raum ' do
+                          = succeed ", #{t('activerecord.attributes.stuga.room')} " do
                             = stuga.display_name(:building)
                           = stuga.room
                         - else
