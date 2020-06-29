@@ -5,7 +5,7 @@
 \
 Moin #{@stuga.label},
 \
-einmal pro Semester erhaltet ihr diese Mail als Erinnerung eure auf https://stugen.de/ hinterlegten Daten zu kontrollieren.
+einmal pro Semester erhaltet ihr diese Mail als Erinnerung eure auf #{root_url} hinterlegten Daten zu kontrollieren.
 \
 Aktuell haben wir für euch folgendes gespeichert:
 - fields.each do |f|
@@ -28,10 +28,10 @@ Aktuell haben wir für euch folgendes gespeichert:
 \
 \
 Sind die Daten noch korrekt? Super, dann einfach mit einem Klick bestätigen:
-https://stugen.de/verify/#{@stuga.id}/#{@stuga.verification_token}
+= verify_url(id: @stuga.id, key: @stuga.verification_token)
 \
 Es stimmt nicht mehr alles? Dann direkt bearbeiten:
-https://stugen.de/verify/#{@stuga.id}/edit/#{@stuga.verification_token}
+= edit_verify_url(id: @stuga.id, key: @stuga.verification_token)
 Nach einer Änderung bekommt ihr den gesamten Datensatz noch einmal als Bestätigung zugesandt.
 \
 \
@@ -56,7 +56,7 @@ c/o StugA Informatik
 \
 Moin #{@stuga.label},
 \
-once per semester you are reminded to check your information on https://stugen.de/en/.
+once per semester you are reminded to check your information on #{root_url}.
 \
 Currently we have saved the following for you:
 - fields.each do |f|
@@ -66,7 +66,7 @@ Currently we have saved the following for you:
     - blank_fields << f
 - unless @stuga.information.blank?
   \
-  In addition the following information text is stored, these textx should only contain temporarily important information:
+  In addition the following information text is stored, these texts should only contain temporarily important information:
   =raw "#{@stuga.information}"
   \-end of the note-
 - if @stuga.information.blank? or not blank_fields.empty?
@@ -79,10 +79,10 @@ Currently we have saved the following for you:
 \
 \
 Is the information still correct? Great, then simply confirm with a click:
-https://stugen.de/en/verify/#{@stuga.id}/#{@stuga.verification_token}
+= verify_url(id: @stuga.id, key: @stuga.verification_token)
 \
 Not everything is correct anymore? Then edit directly:
-https://stugen.de/en/verify/#{@stuga.id}/edit/#{@stuga.verification_token}
+= edit_verify_url(id: @stuga.id, key: @stuga.verification_token)
 Currentyl some information (name of StugA, information text, etc.) is only available in German, but we're working on it in addition to the translation of the explanatory texts.
 After a change, you will receive the entire data record again as confirmation.
 \

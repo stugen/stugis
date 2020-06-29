@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   around_action :switch_locale
 
   def default_url_options
-    { locale: I18n.locale }
+    { locale: I18n.locale, host: (ENV['STUGIS_HOST'] || 'localhost') }
   end
 
   private

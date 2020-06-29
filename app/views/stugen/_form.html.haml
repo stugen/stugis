@@ -48,12 +48,12 @@
           .form-group.col
             = f.label :verification_link
             %span{class: 'form-control', readonly: true}
-              = "https://stugen.de/verify/#{@stugen.id}/#{@stugen.verification_token}"
+              = verify_url(id: @stugen.id, key: @stugen.verification_token)
         .form-row
           .form-group.col
             = f.label :verification_edit
             %span{class: 'form-control', readonly: true}
-              = "https://stugen.de/verify/#{@stugen.id}/edit/#{@stugen.verification_token}"
+              = edit_verify_url(id: @stugen.id, key: @stugen.verification_token)
   .faculty
     %h3
       = t('pagetitles.contact_details')
