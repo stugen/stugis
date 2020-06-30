@@ -26,10 +26,12 @@ Konfiguration:
 
 ### E-Mail
 Es gibt aktuell 2 Typen von E-Mails:
-* Bestätigungsnachrichten über Änderungen an den (auch außerhalb der Admin-Schnittstelle editierbaren) Feldern der Stugendaten
-  Diese Nachrichten werden aktuell automatisch (und hardcoded, [`app/mailers/stugen_mailer.rb`](app/mailers/stugen_mailer.rb)) an den Hauptentwickler versandt. **Achtung:** Erzeugt in einer Testumgebung also (irreführenden) Spam. Es sollte daher ein [Interceptor](https://guides.rubyonrails.org/action_mailer_basics.html#intercepting-emails) eingerichtet werden oder der Quellcode in [`app/mailers/stugen_mailer.rb`](app/mailers/stugen_mailer.rb) entsprechend angepasst werden.
-* Benachrichtigungen bzw. Erinnerungen, dass die Daten wieder überprüft werden sollten
-  Diese Nachrichten können aktuell nur über die `rails console` versandt werden, bspw. `> StugenMailer.with(stuga: Stuga.first).notification.deliver_now`. **Achtung:** Dies sendet die E-Mail an die hinterlegte E-Mailadresse des StugA (und hardcoded im CC an den Hauptentwickler) - Erzeugt in einer Testumgebung also (irreführenden) Spam. Es sollte daher ein [Interceptor](https://guides.rubyonrails.org/action_mailer_basics.html#intercepting-emails) eingerichtet werden oder der Quellcode in [`app/mailers/stugen_mailer.rb`](app/mailers/stugen_mailer.rb) entsprechend angepasst werden.
+* Bestätigungsnachrichten über Änderungen an den (auch außerhalb der Admin-Schnittstelle editierbaren) Feldern der Stugendaten. 
+  Diese Nachrichten werden aktuell automatisch (und hardcoded, [`app/mailers/stugen_mailer.rb`](app/mailers/stugen_mailer.rb)) an den Hauptentwickler versandt.  
+  **Achtung:** Erzeugt in einer Testumgebung also (irreführenden) Spam. Es sollte daher ein [Interceptor](https://guides.rubyonrails.org/action_mailer_basics.html#intercepting-emails) eingerichtet werden oder der Quellcode in [`app/mailers/stugen_mailer.rb`](app/mailers/stugen_mailer.rb) entsprechend angepasst werden.
+* Benachrichtigungen bzw. Erinnerungen, dass die Daten wieder überprüft werden sollten. 
+  Diese Nachrichten können aktuell nur über die `rails console` versandt werden, bspw. `StugenMailer.with(stuga: Stuga.first).notification.deliver_now`.  
+  **Achtung:** Dies sendet die E-Mail an die hinterlegte E-Mailadresse des StugA (und hardcoded im CC an den Hauptentwickler) - Erzeugt in einer Testumgebung also (irreführenden) Spam. Es sollte daher ein [Interceptor](https://guides.rubyonrails.org/action_mailer_basics.html#intercepting-emails) eingerichtet werden oder der Quellcode in [`app/mailers/stugen_mailer.rb`](app/mailers/stugen_mailer.rb) entsprechend angepasst werden.
 
 Konfiguration:
 * `MAIL_HOST`, `MAIL_PORT`, `MAIL_FROM`, `MAIL_USER`, `MAIL_PASSWORD`
@@ -56,7 +58,7 @@ Weiterhin muss das Shema eingespielt werden `rails db:schema:load` (oder da nich
 
 Anschließend können die Seeds eingespielt werden (`rails db:seed`). Die Seeds entsprechen dem Stand der Live-Datenbank von Ende Juni 2020.  
 **Achtung:** Aktuell fehlen in den Seeds noch die englischen Titel der Fachbereiche, diese müssten noch einmal nachgepflegt werden.  
-**Achtung:** Das Einspielen der Seeds erzeugt aktuell ebenfalls die Bestätigungsnachrichten (siehe [E-Mail](#e-mail), da es direkt am `save` der Stugendaten anhägt.
+**Achtung:** Das Einspielen der Seeds erzeugt aktuell ebenfalls die Bestätigungsnachrichten (siehe [E-Mail](#e-mail)), da es direkt am `save` der Stugendaten anhägt.
 
 
 
