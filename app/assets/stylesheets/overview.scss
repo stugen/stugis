@@ -1,0 +1,8 @@
+.faculty {
+    &.open h3 > i {
+        transform: rotate(90deg);
+    }
+    h3 > i {
+        transition: transform 0.5s 0s;
+    }
+}
