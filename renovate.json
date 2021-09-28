@@ -1,5 +1,13 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    ":maintainLockFilesMonthly"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "prHourlyLimit": 0,
+  "schedule": [
+    "on Saturday"
   ]
 }
