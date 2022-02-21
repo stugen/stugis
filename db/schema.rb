@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2020_06_28_182610) do
     t.string "pinterest", default: ""
     t.string "snapchat", default: ""
     t.string "tumblr", default: ""
+    t.string "discord", default: ""
     t.boolean "confirmed", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

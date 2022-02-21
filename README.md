@@ -4,7 +4,7 @@ Das Stugen Informations System (StugIS) dient als Sammelstelle die (Kontakt-)Dat
 
 ## Funktionsumfang
 * Datenerfassung und -bereitstellung (v.A. Kontaktinformationen)
-  * über Self-Service: Stugen (Hinweistext, Telefon, Gebäude, Raum, Homepage, diverse Social-Media-Profile (Facebook, Twitter, YouTube, Instagram, Pinterest, Snapchat und Tumblr))
+  * über Self-Service: Stugen (Hinweistext, Telefon, Gebäude, Raum, Homepage, diverse Social-Media-Profile (Facebook, Twitter, YouTube, Instagram, Pinterest, Snapchat, Tumblr und Discord))
   * als Administrator (zusätzlich zum Self-Service): Fachbereiche (Nummer, deutsche Bezeichnung, englische Bezeichnung), Stugen (Name, Kurzform, Fachbereich, E-Mailadresse)
 * Self-Service über einen Verifikationstoken (keine Accounts notwendig)
 * Administrationsschnittstelle (**Achtung:** Keine Authentifizierung implementiert, siehe [Administration](#administration))

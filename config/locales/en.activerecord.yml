@@ -43,6 +43,8 @@ en:
         snapchat_help: "(`https://www.snapchat.com/add/<StugA>/`)"
         tumblr: "Tumblr"
         tumblr_help: "(`https://<StugA>.tumblr.com/`)"
+        discord: "Discord"
+        discord_help: "(`https://discord.gg/123456`)"
         confirmed: "Data initially confirmed by StugA"
         verification_token: "Verification token"
         verification_link: "Link to the self verification of the StugA - Attention: When accessing the link, the StugA is confirmed without further inquiry, i.e. do not access it from the administrator's side."
