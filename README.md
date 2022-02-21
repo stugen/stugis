@@ -22,7 +22,8 @@ Benötigt wird PostgreSQL mit pgcrypto-Extension. Je nach Rechten des PosgreSQL-
 
 Konfiguration:
 * production: `STUGIS_DATABASE_HOST`, `STUGIS_DATABASE_PORT`, `STUGIS_DATABASE`, `STUGIS_DATABASE_USER`, `STUGIS_DATABASE_PASSWORD`
-* develop (**FIXED VALUES** in [`config/database.yml`](config/database.yml)): database: "stugis_development", username: "stugis", password: "stugis_dev"
+* develop (**FIXED VALUES** in [`config/database.yml`](config/database.yml)): database: "stugis_dev", username: "stugis_dev", password: "stugis_dev"
+* test (**FIXED VALUES** in [`config/database.yml`](config/database.yml)): database: "stugis_test", username: "stugis_test", password: "stugis_test"
 
 ### E-Mail
 Es gibt aktuell 2 Typen von E-Mails:

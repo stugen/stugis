@@ -11,6 +11,7 @@
 
 # Ignore local config files
 /config/application.yml
+.env
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
